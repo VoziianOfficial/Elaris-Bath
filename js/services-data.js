@@ -2,159 +2,111 @@
 
 window.SERVICES_DATA = [
     {
-        "slug": "bathtub-installation",
-        "title": "Bathtub Installation",
-        "page": "bathtub-installation.html",
-        "icon": "bath",
-        "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1300&q=80",
-        "heroTitle": "Compare bathtub installation providers.",
-        "intro": "For new bathtub layouts, fixture coordination, plumbing access, wall surrounds, and quote-based project planning.",
-        "cover": "A new tub can change the whole bathroom flow.",
-        "detail": "Bathtub installation may involve tub type selection, bathroom layout, plumbing connections, wall surround decisions, waterproofing details, access requirements, and finish preferences.",
-        "factors": [
-            "Existing bathroom layout and available space.",
-            "Type of bathtub: alcove, freestanding, soaking, acrylic, cast iron, or renovation style.",
-            "Plumbing access, drain position, and fixture changes.",
-            "Wall surround, tile, waterproofing, and finish preferences."
+        slug: "bathtub-installation",
+        title: "Bathtub Installation",
+        page: "bathtub-installation.html",
+        icon: "bath",
+        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1300&q=80",
+        secondaryImage: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=80",
+        heroTitle: "Compare bathtub installation providers.",
+        intro: "Explore local providers for new tub placement, plumbing coordination, wall surrounds, waterproofing details, and quote-based installation planning.",
+        overviewTitle: "A new tub should fit the room, the plumbing, and the way the bathroom is used.",
+        overview: [
+            "Bathtub installation can include tub selection, removal planning, drain position review, surround materials, fixture placement, waterproofing details, and finish coordination.",
+            "Elaris Bath helps homeowners start the comparison process by organizing the request around project scope instead of presenting itself as the company doing the installation."
         ],
-        "prompts": [
-            "Is removal of the old tub included?",
-            "Who handles plumbing adjustments?",
-            "Are permits required in my area?",
-            "What material options are available?",
-            "What is the expected project timeline?",
-            "What warranty terms apply?"
-        ],
-        "alt": "Modern bathtub installation inspiration"
+        factors: ["Tub style and size", "Drain and fixture location", "Wall surround or tile scope", "Removal, disposal, and access"],
+        prompts: ["Is removal included?", "Who handles plumbing adjustments?", "Are wall surround materials included?", "What timeline should I expect?"],
+        cta: "Request bathtub installation quotes"
     },
     {
-        "slug": "bathtub-replacement",
-        "title": "Bathtub Replacement",
-        "page": "bathtub-replacement.html",
-        "icon": "refresh-cw",
-        "image": "https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?auto=format&fit=crop&w=1300&q=80",
-        "heroTitle": "Compare bathtub replacement providers.",
-        "intro": "For outdated tubs, damaged surfaces, style upgrades, accessibility changes, and replacement quote options.",
-        "cover": "Replacement projects need more than a new surface.",
-        "detail": "A bathtub replacement can involve demolition, disposal, plumbing adjustments, surround updates, waterproofing checks, and finish coordination with the rest of the bathroom.",
-        "factors": [
-            "Condition of the existing tub and surrounding wall area.",
-            "Removal requirements and disposal expectations.",
-            "Fixture compatibility, drain alignment, and plumbing access.",
-            "Desired finish level, material, color, and maintenance needs."
+        slug: "bathtub-replacement",
+        title: "Bathtub Replacement",
+        page: "bathtub-replacement.html",
+        icon: "refresh-cw",
+        image: "https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?auto=format&fit=crop&w=1300&q=80",
+        secondaryImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=80",
+        heroTitle: "Compare bathtub replacement providers.",
+        intro: "Review provider options for outdated tubs, damaged surfaces, style upgrades, accessibility changes, and replacement project quotes.",
+        overviewTitle: "A replacement project is often about function, comfort, and a cleaner visual line.",
+        overview: [
+            "Bathtub replacement may involve removing an existing unit, checking surrounding walls, confirming plumbing compatibility, selecting new materials, and coordinating finish details.",
+            "The right provider fit can depend on whether the project is a simple replacement, a tub-to-shower conversion, or part of a broader bathroom refresh."
         ],
-        "prompts": [
-            "Is disposal included in the quote?",
-            "Will wall surround work be needed?",
-            "Can the provider match existing fixtures?",
-            "What hidden damage could affect pricing?",
-            "How long will the bathroom be unavailable?",
-            "What warranty is offered on materials?"
-        ],
-        "alt": "Bathroom bathtub replacement idea"
+        factors: ["Current tub condition", "Surround wall condition", "Replacement material", "Plumbing and access limits"],
+        prompts: ["Will the old tub be removed?", "Is wall repair included?", "What materials are available?", "How is cleanup handled?"],
+        cta: "Request replacement provider options"
     },
     {
-        "slug": "bathtub-repair",
-        "title": "Bathtub Repair",
-        "page": "bathtub-repair.html",
-        "icon": "wrench",
-        "image": "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1300&q=80",
-        "heroTitle": "Compare bathtub repair providers.",
-        "intro": "For chips, cracks, leaks, surface wear, refinishing needs, and localized repair requests.",
-        "cover": "Small defects can shape the whole bathroom impression.",
-        "detail": "Repair-focused projects may involve surface assessment, refinishing, sealing, crack repair, leak investigation, color matching, and determining whether repair or replacement makes more sense.",
-        "factors": [
-            "Type and size of damage: chip, crack, leak, stain, or surface wear.",
-            "Tub material and compatibility with repair products.",
-            "Whether the issue is cosmetic, structural, or plumbing-related.",
-            "Expected durability, finish matching, and maintenance instructions."
+        slug: "bathtub-repair",
+        title: "Bathtub Repair",
+        page: "bathtub-repair.html",
+        icon: "wrench",
+        image: "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1300&q=80",
+        secondaryImage: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=80",
+        heroTitle: "Compare bathtub repair providers.",
+        intro: "Find providers for chips, cracks, leaks, worn surfaces, refinishing needs, and localized repair requests.",
+        overviewTitle: "Repair-focused projects need a clear diagnosis before the quote makes sense.",
+        overview: [
+            "Bathtub repair may involve surface assessment, crack or chip treatment, leak review, refinishing recommendations, and a decision between repair and replacement.",
+            "Homeowners should compare whether a provider focuses on cosmetic refinishing, structural repair, plumbing-related issues, or full replacement alternatives."
         ],
-        "prompts": [
-            "Is this repair cosmetic or structural?",
-            "Will the finish match the existing tub?",
-            "How long before the tub can be used?",
-            "Is refinishing recommended instead?",
-            "What prep work is required?",
-            "Are follow-up visits included?"
-        ],
-        "alt": "Bathroom repair and refinishing details"
+        factors: ["Type of damage", "Surface material", "Leak risk", "Repair versus replacement value"],
+        prompts: ["Is the issue cosmetic or structural?", "What repair method is used?", "How long should the finish last?", "Is replacement recommended instead?"],
+        cta: "Request bathtub repair quotes"
     },
     {
-        "slug": "shower-remodeling",
-        "title": "Shower Remodeling",
-        "page": "shower-remodeling.html",
-        "icon": "droplets",
-        "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1300&q=80",
-        "heroTitle": "Compare shower remodeling providers.",
-        "intro": "For shower conversions, tile updates, glass enclosures, modern layouts, and remodel quotes.",
-        "cover": "A shower remodel can make the room feel newly designed.",
-        "detail": "Shower remodeling can include conversion, tile layouts, waterproofing systems, niche placement, glass enclosures, drainage, fixtures, and finish selections.",
-        "factors": [
-            "Current shower condition and waterproofing needs.",
-            "Tile, panel, stone, glass, and fixture preferences.",
-            "Drain position, curb style, niche placement, and accessibility goals.",
-            "Timeline, dust control, demolition, and cleanup expectations."
+        slug: "shower-remodeling",
+        title: "Shower Remodeling",
+        page: "shower-remodeling.html",
+        icon: "droplets",
+        image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1300&q=80",
+        secondaryImage: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1100&q=80",
+        heroTitle: "Compare shower remodeling providers.",
+        intro: "Explore providers for shower conversions, tile updates, glass enclosures, waterproofing, modern layouts, and remodel quotes.",
+        overviewTitle: "A shower remodel should balance waterproofing, daily use, and visual calm.",
+        overview: [
+            "Shower remodeling may include layout changes, tile or panel systems, glass doors, fixture upgrades, drainage review, niche placement, and waterproofing details.",
+            "Comparing providers helps homeowners understand whether a company is suited for a focused shower update, a tub-to-shower conversion, or a more complete bathroom remodel."
         ],
-        "prompts": [
-            "What waterproofing system is used?",
-            "Is glass included in the quote?",
-            "Can the layout be changed?",
-            "What tile or panel options are available?",
-            "How is drainage handled?",
-            "What is the cleanup process?"
-        ],
-        "alt": "Modern shower remodeling inspiration"
+        factors: ["Tile or wall system", "Drain and waterproofing", "Glass enclosure style", "Accessibility and storage needs"],
+        prompts: ["What waterproofing system is used?", "Is glass included in the quote?", "Can the layout change?", "What maintenance is required?"],
+        cta: "Request shower remodeling quotes"
     },
     {
-        "slug": "bathroom-plumbing",
-        "title": "Bathroom Plumbing",
-        "page": "bathroom-plumbing.html",
-        "icon": "pipes",
-        "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1300&q=80",
-        "heroTitle": "Compare bathroom plumbing providers.",
-        "intro": "For bathroom fixture updates, drains, valves, plumbing access, and provider comparison.",
-        "cover": "Plumbing details decide how well the bathroom works.",
-        "detail": "Bathroom plumbing requests may relate to fixtures, valves, drains, water lines, leaks, pressure concerns, tub or shower connections, and coordination with renovation work.",
-        "factors": [
-            "Fixture type and whether existing plumbing can support it.",
-            "Access to valves, drains, water lines, and wall cavities.",
-            "Leak history, drainage speed, pressure, and code considerations.",
-            "Coordination with tile, tub, vanity, or shower updates."
+        slug: "bathroom-plumbing",
+        title: "Bathroom Plumbing",
+        page: "bathroom-plumbing.html",
+        icon: "pipes",
+        image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1300&q=80",
+        secondaryImage: "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1100&q=80",
+        heroTitle: "Compare bathroom plumbing providers.",
+        intro: "Connect with providers for bathroom fixture updates, drains, valves, plumbing access, leak concerns, and project-specific quote comparison.",
+        overviewTitle: "Plumbing details often decide whether a bathroom update stays simple or expands.",
+        overview: [
+            "Bathroom plumbing projects may include fixture replacement, valve updates, drain concerns, rough-in adjustments, water pressure issues, and coordination with tile or tub work.",
+            "Elaris Bath helps homeowners route requests toward providers who may fit the plumbing scope, while homeowners should still verify credentials and local requirements directly."
         ],
-        "prompts": [
-            "Is the issue fixture-related or hidden behind the wall?",
-            "Are parts and labor itemized?",
-            "Is permit work expected?",
-            "Can plumbing be coordinated with remodeling?",
-            "What happens if hidden damage is found?",
-            "Is emergency timing available?"
-        ],
-        "alt": "Bathroom plumbing and fixture project"
+        factors: ["Fixture type", "Drain or valve access", "Leak history", "Permit or code requirements"],
+        prompts: ["Is the quote for labor only?", "Are parts included?", "Will walls need to be opened?", "Are permits required locally?"],
+        cta: "Request bathroom plumbing quotes"
     },
     {
-        "slug": "bathroom-renovation",
-        "title": "Bathroom Renovation",
-        "page": "bathroom-renovation.html",
-        "icon": "sparkles",
-        "image": "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1300&q=80",
-        "heroTitle": "Compare bathroom renovation providers.",
-        "intro": "For full bathroom upgrades, layout redesign, premium finishes, modern fixtures, and renovation-focused provider comparison.",
-        "cover": "A renovation should feel planned, not patched together.",
-        "detail": "Bathroom renovation can involve layout planning, demolition, plumbing, fixtures, tile, lighting, vanity updates, ventilation, finish selections, and quote coordination across multiple project parts.",
-        "factors": [
-            "Project size: cosmetic refresh, partial remodel, or full renovation.",
-            "Layout changes, fixture relocation, plumbing, and electrical coordination.",
-            "Finish level: tile, stone, vanity, lighting, mirrors, and hardware.",
-            "Budget range, schedule, material lead times, and temporary bathroom needs."
+        slug: "bathroom-renovation",
+        title: "Bathroom Renovation",
+        page: "bathroom-renovation.html",
+        icon: "sparkles",
+        image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1300&q=80",
+        secondaryImage: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1100&q=80",
+        heroTitle: "Compare bathroom renovation providers.",
+        intro: "Explore providers for full bathroom upgrades, layout redesign, premium finishes, modern fixtures, and renovation-focused project comparison.",
+        overviewTitle: "A full renovation should feel planned, not patched together.",
+        overview: [
+            "Bathroom renovation may include layout planning, demolition, plumbing coordination, tile or wall systems, vanity and lighting updates, bathtub or shower changes, and finish selections.",
+            "Because renovation scope can vary widely, homeowners should compare providers by written scope, communication clarity, timeline, material options, and local requirements."
         ],
-        "prompts": [
-            "Who coordinates the full project scope?",
-            "Are design choices included?",
-            "How are change orders handled?",
-            "What trades may be involved?",
-            "What is the expected timeline?",
-            "How are materials selected and approved?"
-        ],
-        "alt": "Luxury bathroom renovation design"
+        factors: ["Full scope clarity", "Layout and fixture changes", "Material and finish level", "Timeline and project coordination"],
+        prompts: ["Is design planning included?", "Who coordinates plumbing and finish work?", "What is excluded from the quote?", "How are change orders handled?"],
+        cta: "Request renovation provider options"
     }
 ];

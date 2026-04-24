@@ -85,7 +85,7 @@ window.SITE_CONFIG = {
             title: "Bathroom Renovation",
             href: "bathroom-renovation.html",
             description:
-                "Compare providers for full bathroom upgrades, layout redesigns, premium finishes, and renovation projects.",
+                "Compare local providers for full bathroom renovation, layout refreshes, premium finishes, and fixture upgrades.",
             icon: "Sparkles"
         }
     ],

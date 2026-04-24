@@ -8,9 +8,10 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
-    </head>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
     <div class="header-inner">
         <a class="logo" href="index.html" aria-label="Elaris Bath home">
@@ -20,235 +21,84 @@
                 <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
             </span>
         </a>
-
         <nav class="desktop-nav" aria-label="Main navigation">
             <a class="nav-link" href="index.html">Home</a>
             <div class="nav-dropdown">
-                <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-                    Services <i data-lucide="chevron-down"></i>
-                </button>
+                <button class="nav-dropdown-toggle" type="button">Services <i data-lucide="chevron-down"></i></button>
                 <div class="services-dropdown" data-services-dropdown></div>
             </div>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="contact.html">Contact</a>
         </nav>
-
         <div class="header-actions">
-            <a class="btn btn-outline header-phone" href="tel:+18557420186" data-company-phone>Compare Providers</a>
-            <a class="btn btn-primary mobile-callbar" href="tel:+18557420186" data-company-phone>Call</a>
-            <button class="icon-btn mobile-menu-toggle" type="button" aria-label="Open mobile menu" aria-expanded="false">
-                <i data-lucide="menu"></i>
-            </button>
+            <a class="btn btn-outline header-phone" data-company-phone>Compare Providers</a>
+            <a class="btn btn-primary mobile-callbar" data-company-phone>Call</a>
+            <button class="icon-btn mobile-menu-toggle" type="button" aria-label="Open mobile menu" aria-expanded="false"><i data-lucide="menu"></i></button>
         </div>
     </div>
 </header>
 
 <div class="mobile-menu-overlay"></div>
-
 <aside class="mobile-menu" aria-label="Mobile menu">
     <div class="mobile-menu-inner">
         <div class="mobile-menu-top">
             <a class="logo" href="index.html">
                 <span class="logo-mark"></span>
-                <span class="logo-text">
-                    <span class="logo-name" data-company-name>Elaris Bath</span>
-                    <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
-                </span>
+                <span class="logo-text"><span class="logo-name" data-company-name>Elaris Bath</span><span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span></span>
             </a>
-            <button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu">
-                <i data-lucide="x"></i>
-            </button>
+            <button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu"><i data-lucide="x"></i></button>
         </div>
-
-        <nav class="mobile-nav" aria-label="Mobile navigation">
+        <nav class="mobile-nav">
             <a class="mobile-nav-link" href="index.html">Home</a>
-            <button class="mobile-services-toggle" type="button" aria-expanded="false">
-                Services <i data-lucide="plus"></i>
-            </button>
-            <div class="mobile-services-panel">
-                <div data-mobile-services-list></div>
-            </div>
+            <button class="mobile-services-toggle" type="button" aria-expanded="false">Services <i data-lucide="plus"></i></button>
+            <div class="mobile-services-panel"><div data-mobile-services-list></div></div>
             <a class="mobile-nav-link" href="about.html">About</a>
             <a class="mobile-nav-link" href="contact.html">Contact</a>
         </nav>
-
         <div class="mobile-menu-bottom">
-            <div class="mobile-contact-card">
-                <small>Matching line</small>
-                <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
-                <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
-            </div>
+            <div class="mobile-contact-card"><small>Matching line</small><a data-company-phone-number></a><a data-company-email></a></div>
             <a class="btn btn-primary" href="contact.html">Start Bathroom Match <i data-lucide="arrow-right"></i></a>
         </div>
     </div>
 </aside>
-<main id="main" data-service-page>
-    <section class="service-hero">
+
+<main id="main">
+    <section class="service-hero compact-service-hero">
         <div class="container-wide service-hero-grid">
             <div class="service-hero-copy" data-aos="fade-up">
                 <span class="section-eyebrow">Bathroom service category</span>
-                <h1 data-service-title>Compare bathroom renovation providers.</h1>
-                <p data-service-intro>For full bathroom upgrades, layout redesign, premium finishes, modern fixtures, and renovation-focused provider comparison.</p>
+                <h1>Bathroom Renovation provider comparison.</h1>
+                <p>Compare local bathroom renovation providers through Elaris Bath.</p>
                 <div class="service-hero-actions">
-                    <a class="btn btn-primary" href="contact.html">Request Quotes <i data-lucide="arrow-up-right"></i></a>
+                    <a class="btn btn-primary service-cta-link" href="contact.html">Request Quotes <i data-lucide="arrow-up-right"></i></a>
                     <a class="btn btn-outline" href="services.html">View All Services</a>
                 </div>
             </div>
             <div class="service-hero-media" data-aos="fade-left">
-                <img data-service-image src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1300&q=80" alt="Luxury bathroom renovation design" />
-                <div class="service-media-note">
-                    <i data-lucide="sparkles"></i>
-                    <span data-service-note>Bathroom Renovation</span>
-                </div>
+                <img src="" alt="Bathroom Renovation bathroom project inspiration" />
+                <div class="service-media-note"><i data-lucide="sparkles"></i><span>Bathroom Renovation</span></div>
             </div>
         </div>
     </section>
 
-    <section class="section service-intro-section">
-        <div class="container">
-            <div class="service-intro-grid">
-                <div data-aos="fade-right">
-                    <span class="section-eyebrow">What this category covers</span>
-                    <h2 class="section-title" data-service-cover>A renovation should feel planned, not patched together.</h2>
-                </div>
-                <div class="service-intro-copy" data-aos="fade-left">
-                    <p data-service-detail>Bathroom renovation can involve layout planning, demolition, plumbing, fixtures, tile, lighting, vanity updates, ventilation, finish selections, and quote coordination across multiple project parts.</p>
-                    <p>Elaris Bath does not perform bathroom work directly. The platform helps homeowners start the comparison process and request contact from independent providers who may be suited to the project.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section provider-section">
-        <div class="container-wide">
-            <div class="provider-panel">
-                <div class="section-head centered">
-                    <span class="section-eyebrow">Provider evaluation</span>
-                    <h2 class="section-title">Compare the practical details.</h2>
-                    <p class="section-text">A beautiful bathroom reference is only one part of the decision. Before choosing, compare provider fit, scope, documentation, and timing.</p>
-                </div>
-                <div class="provider-grid">
-                    <article class="provider-card" data-aos="fade-up"><i data-lucide="badge-check"></i><h3>Credentials</h3><p>Ask about license, insurance, permits, and local requirements before hiring.</p></article>
-                    <article class="provider-card" data-aos="fade-up" data-aos-delay="100"><i data-lucide="file-text"></i><h3>Written scope</h3><p>Review materials, labor, exclusions, cleanup, and who coordinates related work.</p></article>
-                    <article class="provider-card" data-aos="fade-up" data-aos-delay="200"><i data-lucide="timer"></i><h3>Timeline</h3><p>Confirm availability, project duration, lead times, and expected bathroom downtime.</p></article>
-                    <article class="provider-card" data-aos="fade-up" data-aos-delay="300"><i data-lucide="wallet"></i><h3>Pricing details</h3><p>Compare quote structure, payment terms, optional upgrades, and change-order rules.</p></article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section factors-section">
-        <div class="container">
-            <div class="factors-grid">
-                <div class="factors-image" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80" alt="Bathroom project detail and fixture selection" />
-                </div>
-                <div class="factors-content" data-aos="fade-left">
-                    <span class="section-eyebrow">Project factors</span>
-                    <h2 class="section-title">What can affect provider fit?</h2>
-                    <div class="factor-list" data-service-factors><div><span>01</span><p>Project size: cosmetic refresh, partial remodel, or full renovation.</p></div>
-<div><span>02</span><p>Layout changes, fixture relocation, plumbing, and electrical coordination.</p></div>
-<div><span>03</span><p>Finish level: tile, stone, vanity, lighting, mirrors, and hardware.</p></div>
-<div><span>04</span><p>Budget range, schedule, material lead times, and temporary bathroom needs.</p></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section quote-prompts-section">
-        <div class="container">
-            <div class="quote-prompts-card" data-aos="zoom-in">
-                <span class="section-eyebrow">Quote prompts</span>
-                <h2>Questions to ask before choosing.</h2>
-                <div class="quote-prompts-grid" data-service-prompts><span>Who coordinates the full project scope?</span>
-<span>Are design choices included?</span>
-<span>How are change orders handled?</span>
-<span>What trades may be involved?</span>
-<span>What is the expected timeline?</span>
-<span>How are materials selected and approved?</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section service-final-cta">
-        <div class="container">
-            <div class="service-final-card">
-                <span class="section-eyebrow">Start comparing</span>
-                <h2>Request bathroom renovation provider options.</h2>
-                <p>Send a short project request and compare independent local providers before deciding who to hire.</p>
-                <a class="btn btn-primary" href="contact.html">Request Quotes <i data-lucide="send"></i></a>
-            </div>
-        </div>
-    </section>
+    <div class="service-dynamic-content" data-service-content></div>
 </main>
+
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-brand">
-                <a class="logo" href="index.html">
-                    <span class="logo-mark"></span>
-                    <span class="logo-text">
-                        <span class="logo-name" data-company-name>Elaris Bath</span>
-                        <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
-                    </span>
-                </a>
-                <p class="footer-text" data-footer-text></p>
-            </div>
-
-            <div>
-                <h2 class="footer-title">Navigation</h2>
-                <nav class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-            </div>
-
-            <div>
-                <h2 class="footer-title">Legal</h2>
-                <nav class="footer-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                    <a href="cookie-policy.html">Cookie Policy</a>
-                </nav>
-            </div>
-
-            <div>
-                <h2 class="footer-title">Company info</h2>
-                <div class="footer-info">
-                    <span><strong data-company-name>Elaris Bath</strong></span>
-                    <span data-company-address>United States Service Area</span>
-                    <span>ID: <span data-company-id>ELB-USA-2481</span></span>
-                    <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
-                    <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
-                </div>
-            </div>
+            <div class="footer-brand"><a class="logo" href="index.html"><span class="logo-mark"></span><span class="logo-text"><span class="logo-name" data-company-name>Elaris Bath</span><span class="logo-tagline" data-company-tagline></span></span></a><p class="footer-text" data-footer-text></p></div>
+            <div><h2 class="footer-title">Navigation</h2><nav class="footer-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div>
+            <div><h2 class="footer-title">Legal</h2><nav class="footer-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="cookie-policy.html">Cookie Policy</a></nav></div>
+            <div><h2 class="footer-title">Company info</h2><div class="footer-info"><span><strong data-company-name>Elaris Bath</strong></span><span data-company-address></span><span>ID: <span data-company-id></span></span><a data-company-phone-number></a><a data-company-email></a></div></div>
         </div>
         <div class="footer-disclaimer" data-disclaimer></div>
-        <div class="footer-bottom">
-            <span>© <span data-current-year></span> <span data-company-name>Elaris Bath</span>. All rights reserved.</span>
-            <span>Independent bathroom provider matching platform.</span>
-        </div>
+        <div class="footer-bottom"><span>© <span data-current-year></span> <span data-company-name></span>. All rights reserved.</span><span>Independent bathroom provider matching platform.</span></div>
     </div>
 </footer>
-<div class="cookie-consent">
-    <div class="cookie-consent-inner">
-        <div>
-            <h2 data-cookie-title>Privacy preferences</h2>
-            <p data-cookie-text></p>
-            <div class="cookie-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="cookie-policy.html">Cookie Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-            </div>
-        </div>
-        <div class="cookie-actions">
-            <button class="btn btn-outline" type="button" data-cookie-decline>Decline</button>
-            <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
-        </div>
-    </div>
-</div>
+
+<div class="cookie-consent"><div class="cookie-consent-inner"><div><h2 data-cookie-title>Privacy preferences</h2><p data-cookie-text></p><div class="cookie-links"><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="terms-of-service.html">Terms of Service</a></div></div><div class="cookie-actions"><button class="btn btn-outline" type="button" data-cookie-decline>Decline</button><button class="btn btn-primary" type="button" data-cookie-accept>Accept</button></div></div></div>
+
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -257,37 +107,5 @@
 <script src="js/main.js"></script>
 <script src="js/services-data.js"></script>
 <script src="js/service-page.js"></script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "Does Elaris Bath perform bathroom renovation work?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Elaris Bath is an independent matching platform and does not perform bathroom work directly."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Are quotes usually free?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Many providers offer free estimates, but homeowners should confirm quote terms directly with each company."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How do I compare providers?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Compare credentials, service area, written scope, pricing details, timing, and provider communication before hiring."
-            }
-        }
-    ]
-}
-</script>
 </body>
 </html>

@@ -375,3 +375,99 @@
         min-height: 370px;
     }
 }
+
+/* ================= ABOUT CONTENT UPGRADE ================= */
+.about-operations-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(24px, 5vw, 70px);
+    align-items: center;
+}
+
+.operations-copy p {
+    max-width: 720px;
+    margin: 16px 0 0;
+    color: var(--color-muted);
+}
+
+.operations-photo-stack {
+    display: grid;
+    grid-template-columns: 1fr 0.72fr;
+    gap: 14px;
+    align-items: end;
+}
+
+.operations-photo-stack img {
+    width: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.operations-photo-stack img:nth-child(2) {
+    min-height: 300px;
+    transform: translateY(28px);
+}
+
+.about-values-panel {
+    padding: clamp(24px, 4vw, 54px);
+    border: 1px solid var(--color-border);
+    border-radius: 36px;
+    background: rgba(255,255,255,0.045);
+    box-shadow: var(--shadow-card);
+}
+
+.about-value-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.about-value-grid article {
+    min-height: 230px;
+    padding: 22px;
+    border: 1px solid var(--color-border);
+    border-radius: 26px;
+    background: rgba(3, 28, 25, 0.42);
+}
+
+.about-value-grid i {
+    color: var(--color-cta);
+    width: 32px;
+    height: 32px;
+}
+
+.about-value-grid h3 {
+    margin: 34px 0 8px;
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 0.95;
+}
+
+.about-value-grid p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+@media (max-width: 1100px) {
+    .about-operations-grid,
+    .about-value-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .about-operations-grid,
+    .about-value-grid,
+    .operations-photo-stack {
+        grid-template-columns: 1fr;
+    }
+    .operations-photo-stack img,
+    .operations-photo-stack img:nth-child(2) {
+        min-height: 300px;
+        transform: none;
+    }
+}

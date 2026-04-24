@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCookieConsent(config);
     initCurrentYear();
     initLucideIcons();
+    initPremiumForms();
 });
 
 function initConfigData(config) {
@@ -181,4 +182,77 @@ function initLucideIcons() {
     if (window.lucide) {
         window.lucide.createIcons();
     }
+}
+function initPremiumForms() {
+    const forms = document.querySelectorAll("form");
+    if (!forms.length) return;
+
+    forms.forEach((form) => {
+        if (form.dataset.premiumFormReady === "true") return;
+        form.dataset.premiumFormReady = "true";
+        form.setAttribute("novalidate", "true");
+
+        const fields = form.querySelectorAll("input, select, textarea");
+        fields.forEach((field) => {
+            if (field.type === "checkbox") return;
+            if (!field.parentElement.querySelector(".field-error")) {
+                const error = document.createElement("small");
+                error.className = "field-error";
+                field.insertAdjacentElement("afterend", error);
+            }
+        });
+
+        let success = form.querySelector(".form-success-message");
+        if (!success) {
+            success = document.createElement("div");
+            success.className = "form-success-message";
+            success.setAttribute("role", "status");
+            success.innerHTML = `<i data-lucide="check-circle-2"></i><span>Request sent successfully. We will route your project details for provider comparison.</span>`;
+            form.appendChild(success);
+        }
+
+        form.addEventListener("input", (event) => {
+            validateField(event.target);
+            success.classList.remove("is-visible");
+        });
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            let isValid = true;
+            fields.forEach((field) => {
+                if (!validateField(field)) isValid = false;
+            });
+
+            if (!isValid) {
+                form.classList.add("was-validated");
+                const firstInvalid = form.querySelector(":invalid");
+                firstInvalid?.focus();
+                return;
+            }
+
+            form.classList.remove("was-validated");
+            success.classList.add("is-visible");
+            form.reset();
+            if (window.lucide) window.lucide.createIcons();
+        });
+    });
+}
+
+function validateField(field) {
+    if (!field || !(field instanceof HTMLElement)) return true;
+    const error = field.parentElement?.querySelector(".field-error");
+    if (field.type === "checkbox") return field.checked || !field.required;
+
+    let message = "";
+    if (field.required && !field.value.trim()) {
+        message = "This field is required.";
+    } else if (field.type === "email" && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+        message = "Enter a valid email address.";
+    } else if (field.type === "tel" && field.value && field.value.replace(/\D/g, "").length < 10) {
+        message = "Enter a valid phone number.";
+    }
+
+    if (error) error.textContent = message;
+    field.classList.toggle("is-invalid", Boolean(message));
+    return !message;
 }

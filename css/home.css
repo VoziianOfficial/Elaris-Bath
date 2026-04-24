@@ -4,7 +4,7 @@
 
 .home-hero {
     position: relative;
-    min-height: calc(100vh - var(--header-height));
+    min-height: clamp(620px, 74vh, 860px);
     display: grid;
     align-items: center;
     padding: var(--space-hero-y) 0;
@@ -17,31 +17,37 @@
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     align-items: center;
-    gap: clamp(36px, 6vw, 90px);
+    gap: clamp(26px, 5vw, 64px);
 }
 
 .hero-content h1 {
     max-width: 760px;
     margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(4rem, 8vw, 9.4rem);
-    line-height: 0.82;
+    font-size: clamp(3.4rem, 7.2vw, 8.3rem);
+    line-height: 0.86;
     letter-spacing: -0.075em;
     color: var(--color-sand-soft);
 }
 
 .hero-content p {
     max-width: 620px;
-    margin: 26px 0 0;
+    margin: 20px 0 0;
     color: var(--color-muted);
     font-size: clamp(1rem, 1.4vw, 1.18rem);
+}
+
+.hero-bottom {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-top: 34px;
+    margin-top: 0;
 }
 
 .hero-proof {
@@ -49,11 +55,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     max-width: 620px;
-    margin-top: 42px;
+    margin-top: 0;
 }
 
 .hero-proof div {
-    padding: 16px;
+    padding: 14px;
     border: 1px solid var(--color-border);
     border-radius: 22px;
     background: rgba(255, 255, 255, 0.045);
@@ -63,7 +69,7 @@
     display: block;
     color: var(--color-sand-soft);
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 1.85rem;
     line-height: 1;
 }
 
@@ -77,7 +83,7 @@
 
 .hero-visual {
     position: relative;
-    min-height: 660px;
+    min-height: 560px;
 }
 
 .hero-image {
@@ -103,7 +109,7 @@
     top: 0;
     right: 0;
     width: min(72%, 620px);
-    height: 74%;
+    height: 72%;
     border-radius: 44px;
 }
 
@@ -111,8 +117,19 @@
     left: 0;
     bottom: 0;
     width: 47%;
-    height: 42%;
+    height: 40%;
     border-radius: 34px;
+}
+
+@media (min-width: 980px) {
+    .hero-bottom {
+        grid-template-columns: auto 1fr;
+        align-items: start;
+    }
+
+    .hero-proof {
+        max-width: none;
+    }
 }
 
 .hero-floating-card {
@@ -493,11 +510,12 @@
 @media (max-width: 760px) {
     .home-hero {
         align-items: start;
+        min-height: auto;
         padding: var(--space-hero-y) 0 calc(var(--space-section-y) + 12px);
     }
 
     .hero-content h1 {
-        font-size: clamp(3.6rem, 18vw, 5.8rem);
+        font-size: clamp(3.2rem, 16vw, 5.4rem);
     }
 
     .hero-actions {
