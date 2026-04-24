@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Elaris Bath | Bathroom Provider Matching Platform</title>
+
+    <meta name="description"
+        content="Learn how Elaris Bath helps homeowners compare independent local bathroom service providers without acting as a contractor or direct bathroom company." />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Elaris Bath home">
+                <span class="logo-mark"></span>
+                <span class="logo-text">
+                    <span class="logo-name" data-company-name>Elaris Bath</span>
+                    <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                </span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button">
+                        Services
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-outline header-phone" href="tel:+18557420186" data-company-phone>
+                    Compare Providers
+                </a>
+
+                <a class="btn btn-primary mobile-callbar" href="tel:+18557420186" data-company-phone>
+                    Call
+                </a>
+
+                <button class="icon-btn mobile-menu-toggle" type="button" aria-label="Open mobile menu"
+                    aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <aside class="mobile-menu" aria-label="Mobile menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-top">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"></span>
+                    <span class="logo-text">
+                        <span class="logo-name" data-company-name>Elaris Bath</span>
+                        <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                    </span>
+                </a>
+
+                <button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav">
+                <a class="mobile-nav-link" href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" aria-expanded="false">
+                    Services
+                    <i data-lucide="plus"></i>
+                </button>
+
+                <div class="mobile-services-panel">
+                    <div data-mobile-services-list></div>
+                </div>
+
+                <a class="mobile-nav-link" href="about.html">About</a>
+                <a class="mobile-nav-link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-menu-bottom">
+                <div class="mobile-contact-card">
+                    <small>Talk with the matching line</small>
+                    <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
+                    <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
+                </div>
+
+                <a class="btn btn-primary" href="contact.html">
+                    Start Bathroom Match
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main id="main">
+        <section class="about-hero">
+            <div class="container-wide about-hero-grid">
+                <div class="about-hero-copy" data-aos="fade-up">
+                    <span class="section-eyebrow">About the platform</span>
+
+                    <h1>A refined way to compare bathroom providers.</h1>
+
+                    <p>
+                        Elaris Bath was created for homeowners who want a clearer starting point before speaking with
+                        bathroom companies. The platform organizes common project categories and helps connect requests
+                        with independent local providers.
+                    </p>
+
+                    <div class="about-hero-badges">
+                        <span><i data-lucide="layers-3"></i> Aggregator model</span>
+                        <span><i data-lucide="map"></i> USA service area</span>
+                        <span><i data-lucide="shield-alert"></i> Provider verification encouraged</span>
+                    </div>
+                </div>
+
+                <div class="about-portrait" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
+                        alt="Luxury bathroom with bathtub and stone finishes" />
+
+                    <div class="about-portrait-card">
+                        <small>Important distinction</small>
+                        <strong>Elaris Bath is not a bathroom contractor.</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-story">
+            <div class="container">
+                <div class="about-story-grid">
+                    <div class="about-story-image" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+                            alt="Modern bathroom interior with premium fixtures" />
+                    </div>
+
+                    <div class="about-story-copy" data-aos="fade-left">
+                        <span class="section-eyebrow">Why it exists</span>
+                        <h2 class="section-title">Bathroom projects usually start with too many unknowns.</h2>
+
+                        <p>
+                            A homeowner may know they want a new tub, safer bathing access, a cleaner shower, or better
+                            plumbing function — but not always which provider type to contact first.
+                        </p>
+
+                        <p>
+                            Elaris Bath narrows that first step. Instead of presenting itself as the company doing the
+                            work, the platform helps organize the request so homeowners can compare providers, ask
+                            better questions, and review quote details directly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section model-section">
+            <div class="container-wide">
+                <div class="model-panel">
+                    <div data-aos="fade-up">
+                        <span class="section-eyebrow">Aggregator-safe model</span>
+                        <h2 class="section-title">What Elaris Bath does — and does not do.</h2>
+                    </div>
+
+                    <div class="model-grid">
+                        <article class="model-card positive" data-aos="fade-up">
+                            <i data-lucide="check-circle-2"></i>
+                            <h3>Helps homeowners compare</h3>
+                            <p>
+                                The platform helps homeowners explore bathroom categories and request contact from
+                                independent local providers.
+                            </p>
+                        </article>
+
+                        <article class="model-card positive" data-aos="fade-up" data-aos-delay="100">
+                            <i data-lucide="check-circle-2"></i>
+                            <h3>Routes requests by project type</h3>
+                            <p>
+                                A bathtub installation request should not be treated the same as a repair, shower
+                                remodel, or walk-in tub quote.
+                            </p>
+                        </article>
+
+                        <article class="model-card negative" data-aos="fade-up" data-aos-delay="200">
+                            <i data-lucide="x-circle"></i>
+                            <h3>Does not perform bathroom work</h3>
+                            <p>
+                                Elaris Bath is not a contractor, does not employ technicians, and does not complete
+                                bathroom projects directly.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section verify-section">
+            <div class="container">
+                <div class="verify-grid">
+                    <div class="verify-copy" data-aos="fade-right">
+                        <span class="section-eyebrow">Homeowner responsibility</span>
+                        <h2 class="section-title">Always verify before choosing a provider.</h2>
+                        <p class="section-text">
+                            Provider details, pricing, timelines, warranties, licenses, insurance, and local
+                            requirements should be reviewed directly with the company you consider hiring.
+                        </p>
+                    </div>
+
+                    <div class="verify-list" data-aos="fade-left">
+                        <div>
+                            <span>01</span>
+                            <strong>Ask for license and insurance information.</strong>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <strong>Request written quote details and project scope.</strong>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <strong>Confirm service area, timing, and payment terms.</strong>
+                        </div>
+                        <div>
+                            <span>04</span>
+                            <strong>Review warranties or guarantees directly with the provider.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-cta">
+            <div class="container">
+                <div class="about-cta-card" data-aos="zoom-in">
+                    <span class="section-eyebrow">Start the match</span>
+                    <h2>Ready to compare bathroom providers for your project?</h2>
+                    <p>
+                        Choose your project category and send a request through Elaris Bath.
+                    </p>
+
+                    <a class="btn btn-primary" href="contact.html">
+                        Request Bathroom Quotes
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="index.html">
+                        <span class="logo-mark"></span>
+                        <span class="logo-text">
+                            <span class="logo-name" data-company-name>Elaris Bath</span>
+                            <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                        </span>
+                    </a>
+                    <p class="footer-text" data-footer-text></p>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Navigation</h2>
+                    <nav class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Legal</h2>
+                    <nav class="footer-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Company info</h2>
+                    <div class="footer-info">
+                        <span><strong data-company-name>Elaris Bath</strong></span>
+                        <span data-company-address>United States Service Area</span>
+                        <span>ID: <span data-company-id>ELB-USA-2481</span></span>
+                        <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
+                        <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer" data-disclaimer></div>
+
+            <div class="footer-bottom">
+                <span>© <span data-current-year></span> <span data-company-name>Elaris Bath</span>. All rights
+                    reserved.</span>
+                <span>Independent bathroom provider matching platform.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-consent">
+        <div class="cookie-consent-inner">
+            <div>
+                <h2 data-cookie-title>Privacy preferences</h2>
+                <p data-cookie-text></p>
+
+                <div class="cookie-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+
+            <div class="cookie-actions">
+                <button class="btn btn-outline" type="button" data-cookie-decline>Decline</button>
+                <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

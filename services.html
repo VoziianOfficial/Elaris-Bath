@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bathroom Service Categories | Elaris Bath</title>
+
+    <meta name="description"
+        content="Explore bathroom service categories with Elaris Bath and compare independent local providers for bathtub, shower, plumbing, repair, and walk-in tub projects." />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Elaris Bath home">
+                <span class="logo-mark"></span>
+                <span class="logo-text">
+                    <span class="logo-name" data-company-name>Elaris Bath</span>
+                    <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                </span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button">
+                        Services
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-outline header-phone" href="tel:+18557420186" data-company-phone>
+                    Compare Providers
+                </a>
+
+                <a class="btn btn-primary mobile-callbar" href="tel:+18557420186" data-company-phone>
+                    Call
+                </a>
+
+                <button class="icon-btn mobile-menu-toggle" type="button" aria-label="Open mobile menu"
+                    aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <aside class="mobile-menu" aria-label="Mobile menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-top">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"></span>
+                    <span class="logo-text">
+                        <span class="logo-name" data-company-name>Elaris Bath</span>
+                        <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                    </span>
+                </a>
+
+                <button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav">
+                <a class="mobile-nav-link" href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" aria-expanded="false">
+                    Services
+                    <i data-lucide="plus"></i>
+                </button>
+
+                <div class="mobile-services-panel">
+                    <div data-mobile-services-list></div>
+                </div>
+
+                <a class="mobile-nav-link" href="about.html">About</a>
+                <a class="mobile-nav-link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-menu-bottom">
+                <div class="mobile-contact-card">
+                    <small>Talk with the matching line</small>
+                    <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
+                    <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
+                </div>
+
+                <a class="btn btn-primary" href="contact.html">
+                    Start Bathroom Match
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main id="main">
+        <section class="services-hero">
+            <div class="container-wide services-hero-grid">
+                <div class="services-hero-copy" data-aos="fade-up">
+                    <span class="section-eyebrow">Service atlas</span>
+                    <h1>Bathroom categories arranged for faster provider comparison.</h1>
+                    <p>
+                        Elaris Bath helps homeowners start with the right project category, then compare independent
+                        local providers based on scope, availability, service area, and quote details.
+                    </p>
+
+                    <div class="services-hero-actions">
+                        <a class="btn btn-primary" href="contact.html">
+                            Request Quotes
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                        <a class="btn btn-outline" href="#service-atlas">
+                            Explore Categories
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services-hero-board" data-aos="fade-left">
+                    <div class="board-image">
+                        <img src="https://images.unsplash.com/photo-1595514535316-95d85e68af2d?auto=format&fit=crop&w=1100&q=80"
+                            alt="Premium bathroom bathtub and wall tile" />
+                    </div>
+
+                    <div class="board-note note-one">
+                        <i data-lucide="search-check"></i>
+                        <span>Compare provider fit before hiring</span>
+                    </div>
+
+                    <div class="board-note note-two">
+                        <i data-lucide="map-pin"></i>
+                        <span>Match by local service area</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section service-atlas" id="service-atlas">
+            <div class="container">
+                <div class="section-head split-head">
+                    <div>
+                        <span class="section-eyebrow">All bathroom paths</span>
+                        <h2 class="section-title">Pick the project lane.</h2>
+                    </div>
+
+                    <p class="section-text">
+                        Each card opens a dedicated page with provider-comparison factors, project notes,
+                        quote prompts, and aggregator-safe guidance.
+                    </p>
+                </div>
+
+                <div class="service-atlas-grid">
+                    <a class="atlas-card tall" href="bathtub-installation.html" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80"
+                            alt="Modern bathtub installation inspiration" />
+                        <span class="atlas-number">01</span>
+                        <span class="atlas-icon"><i data-lucide="bath"></i></span>
+                        <div>
+                            <h3>Bathtub Installation</h3>
+                            <p>For new tubs, layout changes, fixture choices, and fresh bathroom builds.</p>
+                        </div>
+                    </a>
+
+                    <a class="atlas-card" href="bathtub-replacement.html" data-aos="fade-up" data-aos-delay="80">
+                        <img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?auto=format&fit=crop&w=900&q=80"
+                            alt="Bathroom bathtub replacement idea" />
+                        <span class="atlas-number">02</span>
+                        <span class="atlas-icon"><i data-lucide="refresh-cw"></i></span>
+                        <div>
+                            <h3>Bathtub Replacement</h3>
+                            <p>For outdated tubs, surface wear, accessibility changes, or style upgrades.</p>
+                        </div>
+                    </a>
+
+                    <a class="atlas-card" href="bathtub-repair.html" data-aos="fade-up" data-aos-delay="120">
+                        <img src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=900&q=80"
+                            alt="Bathroom repair and refinishing" />
+                        <span class="atlas-number">03</span>
+                        <span class="atlas-icon"><i data-lucide="wrench"></i></span>
+                        <div>
+                            <h3>Bathtub Repair</h3>
+                            <p>For chips, cracks, leaks, worn surfaces, and localized repair requests.</p>
+                        </div>
+                    </a>
+
+                    <a class="atlas-card wide" href="shower-remodeling.html" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1100&q=80"
+                            alt="Modern shower remodeling" />
+                        <span class="atlas-number">04</span>
+                        <span class="atlas-icon"><i data-lucide="droplets"></i></span>
+                        <div>
+                            <h3>Shower Remodeling</h3>
+                            <p>For shower conversions, tile updates, glass enclosures, and modern remodels.</p>
+                        </div>
+                    </a>
+
+                    <a class="atlas-card" href="bathroom-plumbing.html" data-aos="fade-up" data-aos-delay="80">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80"
+                            alt="Bathroom sink and plumbing fixtures" />
+                        <span class="atlas-number">05</span>
+                        <span class="atlas-icon"><i data-lucide="pipes"></i></span>
+                        <div>
+                            <h3>Bathroom Plumbing</h3>
+                            <p>For fixture-related work, drain concerns, valve updates, and bathroom plumbing projects.
+                            </p>
+                        </div>
+                    </a>
+
+                    <a class="atlas-card" href="bathroom-renovation.html" data-aos="fade-up" data-aos-delay="120">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80"
+                            alt="Accessible bathroom and bathtub" />
+                        <span class="atlas-number">06</span>
+                        <span class="atlas-icon"><i data-lucide="shield-check"></i></span>
+                        <div>
+                            <h3>Walk-In Tubs</h3>
+                            <p>For safer bathing layouts, comfort-focused tubs, and accessibility-oriented quotes.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section compare-strip">
+            <div class="container-wide">
+                <div class="compare-strip-inner">
+                    <div class="compare-strip-copy" data-aos="fade-right">
+                        <span class="section-eyebrow">Before choosing</span>
+                        <h2 class="section-title">Compare more than a pretty bathroom photo.</h2>
+                    </div>
+
+                    <div class="compare-points" data-aos="fade-left">
+                        <article>
+                            <i data-lucide="badge-check"></i>
+                            <h3>License & insurance</h3>
+                            <p>Ask each provider what credentials are required in your area.</p>
+                        </article>
+
+                        <article>
+                            <i data-lucide="file-text"></i>
+                            <h3>Written quote details</h3>
+                            <p>Review materials, labor scope, timelines, exclusions, and payment terms.</p>
+                        </article>
+
+                        <article>
+                            <i data-lucide="calendar-clock"></i>
+                            <h3>Project timing</h3>
+                            <p>Confirm availability, installation windows, and expected disruption.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section service-cta-section">
+            <div class="container">
+                <div class="service-cta-card" data-aos="zoom-in">
+                    <span class="section-eyebrow">Ready to compare?</span>
+                    <h2>Start with one bathroom category and request provider options.</h2>
+                    <p>
+                        Elaris Bath is free for homeowners and connects requests with independent local service
+                        providers.
+                    </p>
+
+                    <a class="btn btn-primary" href="contact.html">
+                        Request Bathroom Quotes
+                        <i data-lucide="send"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="index.html">
+                        <span class="logo-mark"></span>
+                        <span class="logo-text">
+                            <span class="logo-name" data-company-name>Elaris Bath</span>
+                            <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                        </span>
+                    </a>
+                    <p class="footer-text" data-footer-text></p>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Navigation</h2>
+                    <nav class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Legal</h2>
+                    <nav class="footer-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Company info</h2>
+                    <div class="footer-info">
+                        <span><strong data-company-name>Elaris Bath</strong></span>
+                        <span data-company-address>United States Service Area</span>
+                        <span>ID: <span data-company-id>ELB-USA-2481</span></span>
+                        <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
+                        <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer" data-disclaimer></div>
+
+            <div class="footer-bottom">
+                <span>© <span data-current-year></span> <span data-company-name>Elaris Bath</span>. All rights
+                    reserved.</span>
+                <span>Independent bathroom provider matching platform.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-consent">
+        <div class="cookie-consent-inner">
+            <div>
+                <h2 data-cookie-title>Privacy preferences</h2>
+                <p data-cookie-text></p>
+
+                <div class="cookie-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+
+            <div class="cookie-actions">
+                <button class="btn btn-outline" type="button" data-cookie-decline>Decline</button>
+                <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+
+</html>

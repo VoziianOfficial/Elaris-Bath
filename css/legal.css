@@ -1,0 +1,134 @@
+/* css/legal.css */
+
+.legal-page {
+    overflow: hidden;
+}
+
+.legal-hero {
+    position: relative;
+    padding: clamp(78px, 8vw, 130px) 0 clamp(34px, 5vw, 70px);
+}
+
+.legal-hero::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -120px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(216, 192, 138, 0.14), transparent 68%);
+    pointer-events: none;
+}
+
+.legal-hero h1 {
+    max-width: 900px;
+    margin: 0;
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 8vw, 8.5rem);
+    line-height: 0.84;
+    letter-spacing: -0.075em;
+}
+
+.legal-hero p {
+    max-width: 680px;
+    margin: 24px 0 0;
+    color: var(--color-muted);
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+}
+
+.legal-content-section {
+    padding: 0 0 clamp(76px, 8vw, 130px);
+}
+
+.legal-card {
+    max-width: 940px;
+    margin-inline: auto;
+    padding: clamp(24px, 5vw, 58px);
+    border: 1px solid var(--color-border);
+    border-radius: 38px;
+    background:
+        radial-gradient(circle at top right, rgba(216, 192, 138, 0.08), transparent 34%),
+        rgba(255, 255, 255, 0.055);
+    box-shadow: var(--shadow-soft);
+}
+
+.legal-card h2 {
+    margin: 38px 0 12px;
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+}
+
+.legal-card h2:first-of-type {
+    margin-top: 24px;
+}
+
+.legal-card p,
+.legal-card li {
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.legal-card p {
+    margin: 0 0 16px;
+}
+
+.legal-card ul {
+    display: grid;
+    gap: 10px;
+    margin: 16px 0 22px;
+    padding: 0;
+    list-style: none;
+}
+
+.legal-card li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.legal-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--color-cta);
+    box-shadow: 0 0 0 6px rgba(216, 192, 138, 0.1);
+}
+
+.legal-card strong {
+    color: var(--color-sand-soft);
+}
+
+.legal-card a {
+    color: var(--color-cta);
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+.legal-card a:hover {
+    color: var(--color-sand-soft);
+}
+
+@media (max-width: 760px) {
+    .legal-hero {
+        padding: 54px 0 34px;
+    }
+
+    .legal-hero h1 {
+        font-size: clamp(3.5rem, 18vw, 5.8rem);
+    }
+
+    .legal-card {
+        border-radius: 28px;
+    }
+}
