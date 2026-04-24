@@ -82,11 +82,11 @@ window.SITE_CONFIG = {
             icon: "Pipes"
         },
         {
-            title: "Walk-In Tubs",
-            href: "walk-in-tubs.html",
+            title: "Bathroom Renovation",
+            href: "bathroom-renovation.html",
             description:
-                "Review walk-in tub options and request quotes from local accessibility-focused providers.",
-            icon: "ShieldCheck"
+                "Compare providers for full bathroom upgrades, layout redesigns, premium finishes, and renovation projects.",
+            icon: "Sparkles"
         }
     ],
 

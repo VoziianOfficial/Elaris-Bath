@@ -1,116 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bathroom Service Categories | Elaris Bath</title>
-
-    <meta name="description"
-        content="Explore bathroom service categories with Elaris Bath and compare independent local providers for bathtub, shower, plumbing, repair, and walk-in tub projects." />
-
+    <meta name="description" content="Explore bathroom service categories with Elaris Bath and compare independent local providers for bathtub, shower, plumbing, repair, and bathroom renovation projects." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
-</head>
-
+    </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="index.html" aria-label="Elaris Bath home">
+            <span class="logo-mark"></span>
+            <span class="logo-text">
+                <span class="logo-name" data-company-name>Elaris Bath</span>
+                <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+            </span>
+        </a>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="logo" href="index.html" aria-label="Elaris Bath home">
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                    Services <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="services-dropdown" data-services-dropdown></div>
+            </div>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="btn btn-outline header-phone" href="tel:+18557420186" data-company-phone>Compare Providers</a>
+            <a class="btn btn-primary mobile-callbar" href="tel:+18557420186" data-company-phone>Call</a>
+            <button class="icon-btn mobile-menu-toggle" type="button" aria-label="Open mobile menu" aria-expanded="false">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu-overlay"></div>
+
+<aside class="mobile-menu" aria-label="Mobile menu">
+    <div class="mobile-menu-inner">
+        <div class="mobile-menu-top">
+            <a class="logo" href="index.html">
                 <span class="logo-mark"></span>
                 <span class="logo-text">
                     <span class="logo-name" data-company-name>Elaris Bath</span>
                     <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
                 </span>
             </a>
-
-            <nav class="desktop-nav" aria-label="Main navigation">
-                <a class="nav-link" href="index.html">Home</a>
-
-                <div class="nav-dropdown">
-                    <button class="nav-dropdown-toggle" type="button">
-                        Services
-                        <i data-lucide="chevron-down"></i>
-                    </button>
-                    <div class="services-dropdown" data-services-dropdown></div>
-                </div>
-
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="contact.html">Contact</a>
-            </nav>
-
-            <div class="header-actions">
-                <a class="btn btn-outline header-phone" href="tel:+18557420186" data-company-phone>
-                    Compare Providers
-                </a>
-
-                <a class="btn btn-primary mobile-callbar" href="tel:+18557420186" data-company-phone>
-                    Call
-                </a>
-
-                <button class="icon-btn mobile-menu-toggle" type="button" aria-label="Open mobile menu"
-                    aria-expanded="false">
-                    <i data-lucide="menu"></i>
-                </button>
-            </div>
+            <button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu">
+                <i data-lucide="x"></i>
+            </button>
         </div>
-    </header>
 
-    <div class="mobile-menu-overlay"></div>
-
-    <aside class="mobile-menu" aria-label="Mobile menu">
-        <div class="mobile-menu-inner">
-            <div class="mobile-menu-top">
-                <a class="logo" href="index.html">
-                    <span class="logo-mark"></span>
-                    <span class="logo-text">
-                        <span class="logo-name" data-company-name>Elaris Bath</span>
-                        <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
-                    </span>
-                </a>
-
-                <button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu">
-                    <i data-lucide="x"></i>
-                </button>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <a class="mobile-nav-link" href="index.html">Home</a>
+            <button class="mobile-services-toggle" type="button" aria-expanded="false">
+                Services <i data-lucide="plus"></i>
+            </button>
+            <div class="mobile-services-panel">
+                <div data-mobile-services-list></div>
             </div>
+            <a class="mobile-nav-link" href="about.html">About</a>
+            <a class="mobile-nav-link" href="contact.html">Contact</a>
+        </nav>
 
-            <nav class="mobile-nav">
-                <a class="mobile-nav-link" href="index.html">Home</a>
-
-                <button class="mobile-services-toggle" type="button" aria-expanded="false">
-                    Services
-                    <i data-lucide="plus"></i>
-                </button>
-
-                <div class="mobile-services-panel">
-                    <div data-mobile-services-list></div>
-                </div>
-
-                <a class="mobile-nav-link" href="about.html">About</a>
-                <a class="mobile-nav-link" href="contact.html">Contact</a>
-            </nav>
-
-            <div class="mobile-menu-bottom">
-                <div class="mobile-contact-card">
-                    <small>Talk with the matching line</small>
-                    <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
-                    <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
-                </div>
-
-                <a class="btn btn-primary" href="contact.html">
-                    Start Bathroom Match
-                    <i data-lucide="arrow-right"></i>
-                </a>
+        <div class="mobile-menu-bottom">
+            <div class="mobile-contact-card">
+                <small>Matching line</small>
+                <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
+                <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
             </div>
+            <a class="btn btn-primary" href="contact.html">Start Bathroom Match <i data-lucide="arrow-right"></i></a>
         </div>
-    </aside>
-
-    <main id="main">
+    </div>
+</aside>
+<main id="main">
         <section class="services-hero">
             <div class="container-wide services-hero-grid">
                 <div class="services-hero-copy" data-aos="fade-up">
@@ -223,13 +195,13 @@
                     </a>
 
                     <a class="atlas-card" href="bathroom-renovation.html" data-aos="fade-up" data-aos-delay="120">
-                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80"
-                            alt="Accessible bathroom and bathtub" />
+                        <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=900&q=80"
+                            alt="Luxury bathroom renovation with modern finishes" />
                         <span class="atlas-number">06</span>
-                        <span class="atlas-icon"><i data-lucide="shield-check"></i></span>
+                        <span class="atlas-icon"><i data-lucide="sparkles"></i></span>
                         <div>
-                            <h3>Walk-In Tubs</h3>
-                            <p>For safer bathing layouts, comfort-focused tubs, and accessibility-oriented quotes.</p>
+                            <h3>Bathroom Renovation</h3>
+                            <p>For full bathroom upgrades, layout redesigns, premium finishes, and renovation quotes.</p>
                         </div>
                     </a>
                 </div>
@@ -285,90 +257,80 @@
             </div>
         </section>
     </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a class="logo" href="index.html">
-                        <span class="logo-mark"></span>
-                        <span class="logo-text">
-                            <span class="logo-name" data-company-name>Elaris Bath</span>
-                            <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
-                        </span>
-                    </a>
-                    <p class="footer-text" data-footer-text></p>
-                </div>
-
-                <div>
-                    <h2 class="footer-title">Navigation</h2>
-                    <nav class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Services</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
-                    </nav>
-                </div>
-
-                <div>
-                    <h2 class="footer-title">Legal</h2>
-                    <nav class="footer-links">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="cookie-policy.html">Cookie Policy</a>
-                    </nav>
-                </div>
-
-                <div>
-                    <h2 class="footer-title">Company info</h2>
-                    <div class="footer-info">
-                        <span><strong data-company-name>Elaris Bath</strong></span>
-                        <span data-company-address>United States Service Area</span>
-                        <span>ID: <span data-company-id>ELB-USA-2481</span></span>
-                        <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
-                        <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
-                    </div>
-                </div>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"></span>
+                    <span class="logo-text">
+                        <span class="logo-name" data-company-name>Elaris Bath</span>
+                        <span class="logo-tagline" data-company-tagline>Bathroom Match Platform</span>
+                    </span>
+                </a>
+                <p class="footer-text" data-footer-text></p>
             </div>
 
-            <div class="footer-disclaimer" data-disclaimer></div>
+            <div>
+                <h2 class="footer-title">Navigation</h2>
+                <nav class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
 
-            <div class="footer-bottom">
-                <span>© <span data-current-year></span> <span data-company-name>Elaris Bath</span>. All rights
-                    reserved.</span>
-                <span>Independent bathroom provider matching platform.</span>
+            <div>
+                <h2 class="footer-title">Legal</h2>
+                <nav class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </nav>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Company info</h2>
+                <div class="footer-info">
+                    <span><strong data-company-name>Elaris Bath</strong></span>
+                    <span data-company-address>United States Service Area</span>
+                    <span>ID: <span data-company-id>ELB-USA-2481</span></span>
+                    <a href="tel:+18557420186" data-company-phone-number>+1 (855) 742-0186</a>
+                    <a href="mailto:support@elarisbath.com" data-company-email>support@elarisbath.com</a>
+                </div>
             </div>
         </div>
-    </footer>
-
-    <div class="cookie-consent">
-        <div class="cookie-consent-inner">
-            <div>
-                <h2 data-cookie-title>Privacy preferences</h2>
-                <p data-cookie-text></p>
-
-                <div class="cookie-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="cookie-policy.html">Cookie Policy</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                </div>
-            </div>
-
-            <div class="cookie-actions">
-                <button class="btn btn-outline" type="button" data-cookie-decline>Decline</button>
-                <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
-            </div>
+        <div class="footer-disclaimer" data-disclaimer></div>
+        <div class="footer-bottom">
+            <span>© <span data-current-year></span> <span data-company-name>Elaris Bath</span>. All rights reserved.</span>
+            <span>Independent bathroom provider matching platform.</span>
         </div>
     </div>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="js/config.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/services.js"></script>
+</footer>
+<div class="cookie-consent">
+    <div class="cookie-consent-inner">
+        <div>
+            <h2 data-cookie-title>Privacy preferences</h2>
+            <p data-cookie-text></p>
+            <div class="cookie-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="cookie-actions">
+            <button class="btn btn-outline" type="button" data-cookie-decline>Decline</button>
+            <button class="btn btn-primary" type="button" data-cookie-accept>Accept</button>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/services.js"></script>
 </body>
-
 </html>

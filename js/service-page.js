@@ -2,51 +2,80 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initServiceContent();
-    initAnimations();
+    initServicePageAnimations();
 });
 
-function initServiceContent() {
-    if (!window.SERVICES_DATA) return;
+function getCurrentService() {
+    if (!window.SERVICES_DATA) return null;
 
+    const serviceSlug = document.documentElement.dataset.service;
     const path = window.location.pathname.split("/").pop();
 
-    const service = window.SERVICES_DATA.find(
-        (item) => item.page === path
-    );
+    return window.SERVICES_DATA.find((item) => {
+        return item.slug === serviceSlug || item.page === path;
+    });
+}
 
+function initServiceContent() {
+    const service = getCurrentService();
     if (!service) return;
 
-    // ===== TITLE =====
     document.title = `${service.title} Providers | Elaris Bath`;
 
-    // ===== HERO =====
-    const heroTitle = document.querySelector(".service-hero-copy h1");
-    const heroText = document.querySelector(".service-hero-copy p");
-    const heroImage = document.querySelector(".service-hero-media img");
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute(
+            "content",
+            `Compare local ${service.title.toLowerCase()} providers through Elaris Bath.`
+        );
+    }
 
-    if (heroTitle) heroTitle.textContent = service.heroTitle;
-    if (heroText) heroText.textContent = service.intro;
-    if (heroImage) heroImage.src = service.image;
+    const setText = (selector, value) => {
+        document.querySelectorAll(selector).forEach((el) => {
+            el.textContent = value;
+        });
+    };
 
-    // ===== EYEBROW (иконка + текст) =====
+    setText("[data-service-title]", service.heroTitle);
+    setText("[data-service-intro]", service.intro);
+    setText("[data-service-cover]", service.cover || service.heroTitle);
+    setText("[data-service-detail]", service.detail || service.intro);
+    setText("[data-service-note]", service.title);
+
+    const image = document.querySelector("[data-service-image]");
+    if (image) {
+        image.src = service.image;
+        image.alt = service.alt || service.title;
+    }
+
     const noteIcon = document.querySelector(".service-media-note i");
-    const noteText = document.querySelector(".service-media-note span");
-
     if (noteIcon) {
         noteIcon.setAttribute("data-lucide", service.icon);
     }
 
-    if (noteText) {
-        noteText.textContent = service.title;
+    const factors = document.querySelector("[data-service-factors]");
+    if (factors && Array.isArray(service.factors)) {
+        factors.innerHTML = service.factors
+            .map((factor, index) => `
+                <div>
+                    <span>${String(index + 1).padStart(2, "0")}</span>
+                    <p>${factor}</p>
+                </div>
+            `)
+            .join("");
     }
 
-    // перерисовать иконки
+    const prompts = document.querySelector("[data-service-prompts]");
+    if (prompts && Array.isArray(service.prompts)) {
+        prompts.innerHTML = service.prompts.map((prompt) => `<span>${prompt}</span>`).join("");
+    }
+
     if (window.lucide) {
         window.lucide.createIcons();
     }
 }
 
-function initAnimations() {
+function initServicePageAnimations() {
     if (window.AOS) {
         AOS.init({
             duration: 850,
@@ -56,18 +85,30 @@ function initAnimations() {
         });
     }
 
-    if (window.gsap) {
+    if (window.gsap && window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.to(".service-hero-media img", {
             scale: 1.08,
-            y: 40,
+            y: 34,
             scrollTrigger: {
                 trigger: ".service-hero",
                 start: "top top",
                 end: "bottom top",
                 scrub: true
             }
+        });
+
+        gsap.utils.toArray(".provider-card").forEach((card, index) => {
+            gsap.to(card, {
+                y: index % 2 === 0 ? -14 : 14,
+                scrollTrigger: {
+                    trigger: ".provider-section",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
         });
     }
 }
