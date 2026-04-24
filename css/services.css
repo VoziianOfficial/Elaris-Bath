@@ -4,7 +4,7 @@
 
 .services-hero {
     position: relative;
-    padding: clamp(78px, 8vw, 130px) 0;
+    padding: var(--space-hero-y) 0;
     overflow: hidden;
 }
 
@@ -379,7 +379,7 @@
 
 @media (max-width: 760px) {
     .services-hero {
-        padding: 54px 0 70px;
+        padding: var(--space-hero-y) 0 calc(var(--space-section-y) + 12px);
     }
 
     .services-hero-copy h1 {

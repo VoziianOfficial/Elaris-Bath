@@ -7,7 +7,7 @@
     min-height: calc(100vh - var(--header-height));
     display: grid;
     align-items: center;
-    padding: clamp(80px, 8vw, 130px) 0;
+    padding: var(--space-hero-y) 0;
     overflow: hidden;
 }
 
@@ -170,7 +170,7 @@
 /* ================= HOME SERVICES ================= */
 
 .section-head {
-    margin-bottom: clamp(34px, 5vw, 64px);
+    margin-bottom: clamp(24px, 4vw, 48px);
 }
 
 .split-head {
@@ -290,8 +290,8 @@
 .match-flow-panel {
     display: grid;
     grid-template-columns: 0.86fr 1.14fr;
-    gap: clamp(26px, 5vw, 70px);
-    padding: clamp(24px, 5vw, 70px);
+    gap: clamp(20px, 4vw, 56px);
+    padding: clamp(20px, 4vw, 56px);
     border: 1px solid var(--color-border);
     border-radius: 46px;
     background:
@@ -493,7 +493,7 @@
 @media (max-width: 760px) {
     .home-hero {
         align-items: start;
-        padding: 56px 0 70px;
+        padding: var(--space-hero-y) 0 calc(var(--space-section-y) + 12px);
     }
 
     .hero-content h1 {

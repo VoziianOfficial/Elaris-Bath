@@ -1,7 +1,7 @@
 /* css/contact.css */
 
 .contact-hero {
-    padding: clamp(80px, 9vw, 140px) 0 40px;
+    padding: var(--space-hero-y) 0 clamp(24px, 4vw, 48px);
     text-align: center;
 }
 
@@ -213,7 +213,7 @@
 
 @media (max-width: 760px) {
     .contact-hero {
-        padding: 54px 0 30px;
+        padding: var(--space-hero-y) 0 calc(var(--space-section-y) - 8px);
     }
 
     .contact-hero h1 {

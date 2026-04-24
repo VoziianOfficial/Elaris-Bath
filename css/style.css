@@ -55,6 +55,9 @@
     --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.18);
 
     --transition: 0.35s ease;
+
+    --space-section-y: clamp(38px, 4.5vw, 70px);
+    --space-hero-y: clamp(44px, 5vw, 78px);
 }
 
 /* ================= RESET ================= */
@@ -165,7 +168,7 @@ ol {
 
 .section {
     position: relative;
-    padding: clamp(76px, 9vw, 140px) 0;
+    padding: var(--space-section-y) 0;
 }
 
 .section-eyebrow {
@@ -859,6 +862,8 @@ ol {
 @media (max-width: 760px) {
     :root {
         --header-height: 74px;
+        --space-section-y: 44px;
+        --space-hero-y: 52px;
     }
 
     .container,
@@ -892,10 +897,6 @@ ol {
         min-height: 42px;
         padding: 10px 14px;
         font-size: 0.82rem;
-    }
-
-    .section {
-        padding: 70px 0;
     }
 
     .section-title {

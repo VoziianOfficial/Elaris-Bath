@@ -1,7 +1,7 @@
 /* css/service-page.css */
 
 .service-hero {
-    padding: clamp(76px, 8vw, 130px) 0;
+    padding: var(--space-hero-y) 0;
 }
 
 .service-hero-grid {
@@ -315,7 +315,7 @@
 
 @media (max-width: 760px) {
     .service-hero {
-        padding: 54px 0 70px;
+        padding: var(--space-hero-y) 0 calc(var(--space-section-y) + 12px);
     }
 
     .service-hero-copy h1 {

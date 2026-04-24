@@ -6,7 +6,7 @@
 
 .legal-hero {
     position: relative;
-    padding: clamp(78px, 8vw, 130px) 0 clamp(34px, 5vw, 70px);
+    padding: var(--space-hero-y) 0 clamp(20px, 3vw, 40px);
 }
 
 .legal-hero::before {
@@ -39,7 +39,7 @@
 }
 
 .legal-content-section {
-    padding: 0 0 clamp(76px, 8vw, 130px);
+    padding: 0 0 var(--space-section-y);
 }
 
 .legal-card {
@@ -121,7 +121,7 @@
 
 @media (max-width: 760px) {
     .legal-hero {
-        padding: 54px 0 34px;
+        padding: var(--space-hero-y) 0 calc(var(--space-section-y) - 8px);
     }
 
     .legal-hero h1 {

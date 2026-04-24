@@ -3,7 +3,7 @@
 /* ================= ABOUT HERO ================= */
 
 .about-hero {
-    padding: clamp(76px, 8vw, 130px) 0;
+    padding: var(--space-hero-y) 0;
     overflow: hidden;
 }
 
@@ -329,7 +329,7 @@
 
 @media (max-width: 760px) {
     .about-hero {
-        padding: 54px 0 70px;
+        padding: var(--space-hero-y) 0 calc(var(--space-section-y) + 12px);
     }
 
     .about-hero-copy h1 {
