@@ -93,7 +93,7 @@ function renderServiceSections(service) {
                 <div class="compare-mini-card" data-aos="fade-up">
                     <i data-lucide="search-check"></i>
                     <h3>Use the platform as a starting point.</h3>
-                    <p>Elaris Bath helps organize your request and connect it with independent local providers. It does not complete, supervise, or guarantee bathroom work.</p>
+                    <p>Elaris Bath helps organize your request for provider comparison. It does not complete, supervise, or guarantee bathroom work.</p>
                     <p>Think of the platform as an intake and comparison layer: you describe the scope, then providers can clarify what is included, what is excluded, and what changes the price.</p>
                     <p>For any service category, the final decision should be based on written scope, credential checks, timeline clarity, and a quote that matches the same assumptions.</p>
                 </div>

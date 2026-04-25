@@ -208,7 +208,7 @@ function initPremiumForms() {
             success = document.createElement("div");
             success.className = "form-success-message";
             success.setAttribute("role", "status");
-            success.innerHTML = `<i data-lucide="check-circle-2"></i><span>Your request was sent successfully. We will route the project details for provider comparison.</span>`;
+            success.innerHTML = `<i data-lucide="check-circle-2"></i><span>Request received. Use the details you entered to compare providers and confirm scope, credentials, and pricing directly.</span>`;
             form.appendChild(success);
         }
 

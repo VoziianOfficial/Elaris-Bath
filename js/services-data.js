@@ -13,7 +13,7 @@ window.SERVICES_DATA = [
         overviewTitle: "A new tub should fit the room, the plumbing, and the way the bathroom is used.",
         overview: [
             "Bathtub installation can include tub selection, removal planning, drain position review, surround materials, fixture placement, waterproofing details, and finish coordination.",
-            "Elaris Bath helps homeowners start the comparison process by organizing the request around project scope instead of presenting itself as the company doing the installation."
+            "Elaris Bath helps homeowners start the comparison process by organizing the request around project scope. It is an independent matching platform, not the company doing the installation."
         ],
         factors: ["Tub style and size", "Drain and fixture location", "Wall surround or tile scope", "Removal, disposal, and access"],
         prompts: ["Is removal included?", "Who handles plumbing adjustments?", "Are wall surround materials included?", "What timeline should I expect?", "Which tub materials fit my layout?", "Is disposal listed in writing?", "How is waterproofing handled?", "What warranty terms apply?", "Who confirms permits or code needs?"],
