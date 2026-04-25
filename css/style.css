@@ -1094,176 +1094,168 @@ ol {
     }
 }
 
-/* ================= SENIOR POLISH PATCH ================= */
-.site-header {
-    position: sticky;
-    top: 0;
-}
-
-.section-title,
-.service-hero-copy h1,
-.about-hero-copy h1,
-.services-hero-copy h1,
-.contact-hero h1,
-.legal-hero h1,
-.hero-content h1 {
-    font-weight: 600;
-}
-
-.section-title {
-    font-size: clamp(2.15rem, 4.6vw, 4.9rem);
-    line-height: 0.98;
-}
-
-.section-eyebrow {
-    margin-bottom: 12px;
-}
-
-.section-text {
-    margin-top: 14px;
-}
-
-.form-check.full {
-    grid-column: 1 / -1;
-    width: 100%;
-}
-
-.form-check {
-    align-items: center;
-    line-height: 1.45;
-}
-
-.form-check span:last-child {
-    display: block;
-    max-width: none;
-    color: var(--color-muted);
-}
-
-.form-check .field-error {
-    grid-column: 1 / -1;
-}
-
-.field-error {
-    display: block;
-    min-height: 18px;
-    margin-top: 6px;
-    color: #ffcfbd;
-    font-size: 0.78rem;
-    font-weight: 700;
-}
-
-.form-field input.is-invalid,
-.form-field textarea.is-invalid,
-.form-field select.is-invalid {
-    border-color: rgba(255, 207, 189, 0.9);
-    background: rgba(255, 207, 189, 0.07);
-}
-
-.form-check.is-invalid .custom-check {
-    border-color: rgba(255, 207, 189, 0.95);
-    box-shadow: 0 0 0 4px rgba(255, 207, 189, 0.08);
-}
-
-.form-success-message {
-    display: none;
-    align-items: center;
-    gap: 10px;
-    margin-top: 16px;
-    padding: 13px 14px;
-    color: var(--color-sand-soft);
-    border: 1px solid rgba(216, 192, 138, 0.34);
-    border-radius: 16px;
-    background: rgba(216, 192, 138, 0.1);
-    font-size: 0.9rem;
-    font-weight: 800;
-}
-
-.form-success-message.is-visible {
-    display: flex;
-}
-
-.form-success-message i {
-    flex: 0 0 auto;
-    color: var(--color-cta);
-}
-
-@media (max-width: 760px) {
-    :root {
-        --header-height: 68px;
-        --space-section-y: 42px;
-        --space-hero-y: 34px;
+/* ================= TABLET COMPACT FORMS PATCH ================= */
+@media (min-width: 761px) and (max-width: 1100px) {
+    /* Home quote section + Contact form section */
+    .quote-section,
+    .contact-main {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
     }
 
-    .btn {
-        min-height: 42px;
-        padding: 10px 14px;
-        font-size: 0.84rem;
-        gap: 7px;
+    .quote-grid,
+    .contact-grid {
+        gap: 22px !important;
+        align-items: start !important;
     }
 
-    .mobile-callbar {
-        width: 42px;
-        height: 42px;
-        min-height: 42px;
-        padding: 0;
-        font-size: 0;
-        border-radius: 50%;
+    .quote-copy .section-title,
+    .contact-hero h1 {
+        font-size: clamp(2.65rem, 5.4vw, 4.4rem) !important;
+        line-height: 0.92 !important;
     }
 
-    .mobile-callbar::before {
-        content: "☎";
-        font-size: 1rem;
-        line-height: 1;
+    .quote-copy .section-text,
+    .contact-hero p,
+    .form-intro p {
+        font-size: 0.94rem !important;
+        line-height: 1.55 !important;
     }
 
-    .mobile-menu-toggle,
-    .icon-btn {
-        width: 42px;
-        height: 42px;
+    .compact-lead-form,
+    .contact-form {
+        width: 100% !important;
+        max-width: 540px !important;
+        padding: 18px !important;
+        border-radius: 24px !important;
+        margin-inline: auto !important;
     }
 
-    .mobile-menu-inner {
-        min-height: auto;
-        gap: 18px;
-        padding: 14px;
-        border-radius: 24px;
+    .compact-lead-form .form-grid,
+    .contact-form .form-grid {
+        gap: 10px !important;
     }
 
-    .mobile-nav-link,
-    .mobile-services-toggle {
-        padding: 12px 0;
-        font-size: clamp(1.65rem, 10vw, 3rem);
+    .compact-lead-form .form-field input,
+    .compact-lead-form .form-field select,
+    .contact-form .form-field input,
+    .contact-form .form-field select {
+        min-height: 42px !important;
+        padding: 10px 38px 10px 13px !important;
+        border-radius: 13px !important;
+        font-size: 0.9rem !important;
     }
 
-    .mobile-service-link {
-        padding: 11px;
-        border-radius: 14px;
+    .compact-lead-form .form-field textarea,
+    .contact-form .form-field textarea {
+        height: 78px !important;
+        min-height: 78px !important;
+        padding: 11px 38px 11px 13px !important;
+        border-radius: 13px !important;
+        font-size: 0.9rem !important;
     }
 
-    .mobile-contact-card {
-        padding: 14px;
-        border-radius: 18px;
+    .compact-lead-form .form-check,
+    .contact-form .form-check {
+        gap: 9px !important;
+        font-size: 0.76rem !important;
+        line-height: 1.35 !important;
     }
 
-    .section-title {
-        font-size: clamp(2rem, 11vw, 3.4rem);
+    .compact-lead-form .custom-check,
+    .contact-form .custom-check {
+        width: 18px !important;
+        height: 18px !important;
+        border-radius: 6px !important;
     }
 
-    .form-check {
-        align-items: flex-start;
-        font-size: 0.82rem;
+    .compact-lead-form .custom-check::after,
+    .contact-form .custom-check::after {
+        left: 6px !important;
+        top: 2px !important;
+        width: 5px !important;
+        height: 10px !important;
     }
 
-    .cookie-consent {
-        bottom: 10px;
-        border-radius: 18px;
+    .compact-lead-form .btn,
+    .contact-form .btn {
+        width: auto !important;
+        min-height: 42px !important;
+        padding: 10px 18px !important;
+        font-size: 0.9rem !important;
+        margin-top: 12px !important;
     }
 
-    .cookie-consent-inner {
-        gap: 12px;
+    .form-success-message {
+        margin-top: 10px !important;
+        padding: 10px 12px !important;
+        border-radius: 13px !important;
+        font-size: 0.82rem !important;
     }
 
-    .cookie-actions .btn {
-        width: 100%;
+    .field-error {
+        min-height: 13px !important;
+        margin-top: 3px !important;
+        font-size: 0.68rem !important;
+    }
+
+    .quote-mini-list {
+        gap: 7px !important;
+        margin-top: 18px !important;
+    }
+
+    .quote-mini-list span {
+        padding: 8px 10px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .form-intro {
+        margin-bottom: 12px !important;
+    }
+
+    .form-intro h2 {
+        font-size: clamp(1.7rem, 3vw, 2.25rem) !important;
+        line-height: 0.98 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .contact-info {
+        gap: 10px !important;
+    }
+
+    .contact-info .info-card {
+        min-height: auto !important;
+        padding: 16px !important;
+        border-radius: 22px !important;
+    }
+
+    .contact-info .info-card h3 {
+        font-size: 1.55rem !important;
+        margin-bottom: 7px !important;
+    }
+
+    .contact-info .info-card p {
+        font-size: 0.86rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+    .quote-grid,
+    .contact-grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.82fr) !important;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 899px) {
+    .quote-grid,
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .quote-copy,
+    .contact-info {
+        max-width: 620px !important;
+        margin-inline: auto !important;
     }
 }
