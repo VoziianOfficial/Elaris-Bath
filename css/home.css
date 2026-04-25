@@ -50,6 +50,13 @@
     margin-top: 0;
 }
 
+.hero-actions .btn {
+    flex-shrink: 0;
+    /* не сжимается */
+    white-space: nowrap;
+    /* текст не ломается */
+}
+
 .hero-proof {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
