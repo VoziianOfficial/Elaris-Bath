@@ -76,6 +76,12 @@ html {
     scroll-padding-top: var(--header-height);
 }
 
+html.no-aos [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
 body {
     width: 100%;
     min-height: 100vh;

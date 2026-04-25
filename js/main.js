@@ -14,8 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
     initCookieConsent(config);
     initCurrentYear();
     initLucideIcons();
+    initAosFallback();
     initPremiumForms();
 });
+
+function initAosFallback() {
+    if (window.AOS) return;
+    document.documentElement.classList.add("no-aos");
+}
 
 function initConfigData(config) {
     document.querySelectorAll("[data-company-name]").forEach((el) => {
