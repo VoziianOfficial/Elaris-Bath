@@ -436,9 +436,19 @@ ol {
     position: relative;
 }
 
+.nav-dropdown::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: 100%;
+    height: 30px;
+    background: transparent;
+}
+
 .services-dropdown {
     position: absolute;
-    top: calc(100% + 18px);
+    top: calc(100% + 10px);
     left: 50%;
     width: 380px;
     padding: 12px;
@@ -451,15 +461,19 @@ ol {
     visibility: hidden;
     pointer-events: none;
     transition: var(--transition);
+    z-index: 20;
 }
 
 .nav-dropdown:hover .services-dropdown,
-.nav-dropdown:focus-within .services-dropdown {
+.nav-dropdown:focus-within .services-dropdown,
+.nav-dropdown.is-open .services-dropdown,
+.services-dropdown:hover {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
 }
+
 
 .services-dropdown-link {
     display: grid;
