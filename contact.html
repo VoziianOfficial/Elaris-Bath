@@ -22,25 +22,58 @@
 <aside class="mobile-menu" aria-label="Mobile menu"><div class="mobile-menu-inner"><div class="mobile-menu-top"><a class="logo" href="index.html"><span class="logo-mark"></span><span class="logo-text"><span class="logo-name" data-company-name>Elaris Bath</span><span class="logo-tagline" data-company-tagline></span></span></a><button class="icon-btn mobile-menu-close" type="button" aria-label="Close mobile menu"><i data-lucide="x"></i></button></div><nav class="mobile-nav"><a class="mobile-nav-link" href="index.html">Home</a><button class="mobile-services-toggle" type="button">Services <i data-lucide="plus"></i></button><div class="mobile-services-panel"><div data-mobile-services-list></div></div><a class="mobile-nav-link" href="about.html">About</a><a class="mobile-nav-link" href="contact.html">Contact</a></nav><div class="mobile-menu-bottom"><div class="mobile-contact-card"><small>Matching line</small><a data-company-phone-number></a><a data-company-email></a></div></div></div></aside>
 
 <main id="main">
-    <section class="contact-hero premium-contact-hero">
-        <div class="container contact-hero-grid">
-            <div class="contact-hero-photo" data-aos="fade-left"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1100&q=80" alt="Premium bathroom interior with bathtub"><div><strong>Bathroom request flow</strong><span>Project type → scope notes → provider comparison</span></div></div>
-            <div data-aos="fade-up">
-                <span class="section-eyebrow">Start request</span>
-                <h1>Tell us what your bathroom needs.</h1>
-                <div class="contact-hero-points">
-                    <span><i data-lucide="file-check-2"></i> Clear project intake</span>
-                    <span><i data-lucide="map-pin-check"></i> USA provider matching</span>
-                    <span><i data-lucide="shield-check"></i> Verification encouraged</span>
+    <section class="contact-hero contact-hero-redesign">
+        <div class="container-wide contact-hero-shell">
+            <div class="contact-hero-content" data-aos="fade-up">
+                <span class="section-eyebrow">Bathroom request desk</span>
+                <h1>Start with the right bathroom category.</h1>
+                <p>
+                    Tell Elaris Bath what kind of project you are considering. The request is organized by service type
+                    so homeowners can compare independent local bathroom providers more clearly.
+                </p>
+
+                <div class="contact-hero-actions">
+                    <a class="btn btn-primary" href="#contact-form">Start Request <i data-lucide="arrow-down"></i></a>
+                    <a class="btn btn-outline" data-company-phone href="tel:+18557420186">Call Matching Line</a>
                 </div>
-                <p>Elaris Bath organizes your request by project type and helps route it toward independent local providers. The platform does not perform bathroom work directly.</p>
+
+                <div class="contact-hero-metrics" aria-label="Contact process highlights">
+                    <div>
+                        <i data-lucide="clipboard-list"></i>
+                        <strong>Project scope</strong>
+                        <span>Short notes help route the request.</span>
+                    </div>
+                    <div>
+                        <i data-lucide="map-pin-check"></i>
+                        <strong>Local fit</strong>
+                        <span>Provider area should be confirmed directly.</span>
+                    </div>
+                    <div>
+                        <i data-lucide="shield-check"></i>
+                        <strong>Verify first</strong>
+                        <span>Check license, insurance, and quote terms.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-hero-visual" data-aos="fade-left">
+                <div class="contact-hero-image main">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80" alt="Elegant bathroom with bathtub and warm finishes">
+                </div>
+                <div class="contact-hero-image small">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80" alt="Modern bathroom vanity detail">
+                </div>
+                <div class="contact-routing-card">
+                    <span>Request flow</span>
+                    <strong>Category → Scope → Provider comparison</strong>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section contact-main">
         <div class="container contact-grid">
-            <form class="form-card contact-form premium-form" data-aos="fade-up">
+            <form class="form-card contact-form premium-form" id="contact-form" data-aos="fade-up">
                 <div class="form-intro"><span>Request form</span><h2>Compact project intake</h2><p>Share enough detail to help match the request with the right bathroom category.</p></div>
                 <div class="form-grid">
                     <label class="form-field"><input type="text" name="firstName" placeholder="First name" required /></label>

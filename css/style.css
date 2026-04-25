@@ -1259,3 +1259,36 @@ ol {
         margin-inline: auto !important;
     }
 }
+
+/* ================= REQUESTED GLOBAL STICKY HEADER FIX ================= */
+.site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 5000 !important;
+    transform: translateZ(0);
+}
+
+@supports (position: sticky) {
+    .site-header {
+        position: sticky !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        height: 68px !important;
+    }
+
+    .mobile-callbar {
+        width: auto !important;
+        min-width: 42px !important;
+        padding-inline: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    .mobile-menu-toggle {
+        width: 42px !important;
+        height: 42px !important;
+        flex: 0 0 42px !important;
+    }
+}

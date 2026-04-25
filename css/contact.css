@@ -459,3 +459,230 @@
     margin-left: 0;
     margin-right: 0;
 }
+
+/* ================= CONTACT HERO REDESIGN ================= */
+.contact-hero-redesign {
+    padding: clamp(42px, 5vw, 72px) 0 clamp(28px, 4vw, 54px) !important;
+    text-align: left !important;
+}
+
+.contact-hero-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.82fr);
+    align-items: center;
+    gap: clamp(28px, 5vw, 72px);
+}
+
+.contact-hero-content {
+    max-width: 760px;
+}
+
+.contact-hero-redesign h1 {
+    max-width: 760px;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.8vw, 6.4rem) !important;
+    font-weight: 600 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.06em !important;
+    color: var(--color-sand-soft);
+}
+
+.contact-hero-redesign p {
+    max-width: 610px;
+    margin: 20px 0 0 !important;
+    color: var(--color-muted);
+    font-size: clamp(0.98rem, 1.2vw, 1.1rem) !important;
+    line-height: 1.65 !important;
+}
+
+.contact-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.contact-hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.contact-hero-metrics div {
+    display: grid;
+    gap: 7px;
+    min-height: 142px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: 0 14px 46px rgba(0, 0, 0, 0.12);
+}
+
+.contact-hero-metrics i {
+    width: 24px;
+    height: 24px;
+    color: var(--color-cta);
+}
+
+.contact-hero-metrics strong {
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+
+.contact-hero-metrics span {
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.contact-hero-visual {
+    position: relative;
+    min-height: 520px;
+}
+
+.contact-hero-image {
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.9s ease;
+}
+
+.contact-hero-image:hover img {
+    transform: scale(1.055);
+}
+
+.contact-hero-image.main {
+    top: 0;
+    right: 0;
+    width: 82%;
+    height: 78%;
+    border-radius: 38px;
+}
+
+.contact-hero-image.small {
+    left: 0;
+    bottom: 0;
+    width: 48%;
+    height: 42%;
+    border-radius: 28px;
+}
+
+.contact-routing-card {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    z-index: 2;
+    width: min(330px, 78%);
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    background: rgba(3, 28, 25, 0.84);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-card);
+}
+
+.contact-routing-card span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-cta);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.contact-routing-card strong {
+    color: var(--color-sand-soft);
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+@media (max-width: 1100px) {
+    .contact-hero-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-content {
+        max-width: 860px;
+    }
+
+    .contact-hero-visual {
+        min-height: 470px;
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-hero-redesign {
+        padding: 34px 0 34px !important;
+    }
+
+    .contact-hero-redesign h1 {
+        font-size: clamp(2.8rem, 14vw, 4.8rem) !important;
+    }
+
+    .contact-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-hero-actions .btn {
+        width: 100% !important;
+        min-height: 44px !important;
+        padding-inline: 12px !important;
+        font-size: 0.82rem !important;
+    }
+
+    .contact-hero-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-metrics div {
+        min-height: auto;
+    }
+
+    .contact-hero-visual {
+        min-height: 390px;
+    }
+
+    .contact-hero-image.main {
+        width: 86%;
+        height: 74%;
+        border-radius: 28px;
+    }
+
+    .contact-hero-image.small {
+        width: 55%;
+        height: 38%;
+        border-radius: 22px;
+    }
+
+    .contact-routing-card {
+        right: 0;
+        bottom: 4%;
+        width: 84%;
+    }
+}
+
+@media (max-width: 430px) {
+    .contact-hero-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-visual {
+        min-height: 350px;
+    }
+}

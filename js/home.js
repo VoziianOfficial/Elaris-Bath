@@ -57,9 +57,17 @@ function initBathStyleSwiper() {
 
     new Swiper(".bath-style-swiper", {
         slidesPerView: 1.08,
+        loop: true,
+        loopAdditionalSlides: 2,
+        centeredSlides: false,
         spaceBetween: 16,
         grabCursor: true,
-        speed: 700,
+        speed: 750,
+        autoplay: {
+            delay: 3200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
         pagination: {
             el: ".bath-style-swiper .swiper-pagination",
             clickable: true
