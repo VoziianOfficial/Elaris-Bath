@@ -232,6 +232,26 @@ ol {
     transition: transform var(--transition), background var(--transition), color var(--transition), border var(--transition);
 }
 
+.btn i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    display: block;
+}
+
+.btn-primary svg,
+.btn-outline svg {
+    transform: translateY(0.5px);
+}
+
 .btn-primary {
     color: var(--color-bg-dark);
     background: var(--color-cta);
