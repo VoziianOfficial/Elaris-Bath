@@ -1,8 +1,19 @@
 // js/about.js
 
 document.addEventListener("DOMContentLoaded", () => {
+    removeAboutStoryImageForSmallScreens();
     initAboutAnimations();
 });
+
+function removeAboutStoryImageForSmallScreens() {
+    const storyImage = document.querySelector(".about-story-image");
+    if (!storyImage || !window.matchMedia) return;
+
+    const isMobileOrTablet = window.matchMedia("(max-width: 1024px)").matches;
+    if (!isMobileOrTablet) return;
+
+    storyImage.remove();
+}
 
 function initAboutAnimations() {
     if (window.AOS) {
