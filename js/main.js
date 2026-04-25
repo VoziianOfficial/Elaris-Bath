@@ -40,7 +40,17 @@ function initConfigData(config) {
     });
 
     document.querySelectorAll("[data-company-phone]").forEach((el) => {
-        el.textContent = config.phoneButtonText || config.phone;
+        let label = config.phoneButtonText || config.phone;
+        if (el.classList?.contains("mobile-callbar")) {
+            label = "Call";
+        }
+
+        const labelNode = el.querySelector?.(".btn-label");
+        if (labelNode) {
+            labelNode.textContent = label;
+        } else if (!el.classList?.contains("icon-btn") && !el.querySelector?.("i[data-lucide], svg")) {
+            el.textContent = label;
+        }
         el.href = `tel:${config.phoneHref}`;
     });
 

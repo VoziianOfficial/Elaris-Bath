@@ -287,6 +287,23 @@ ol {
     transition: var(--transition);
 }
 
+.icon-btn i {
+    display: grid;
+    place-items: center;
+    line-height: 0;
+}
+
+.icon-btn svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.mobile-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
 .icon-btn:hover {
     color: var(--color-bg-dark);
     background: var(--color-cta);
@@ -473,9 +490,12 @@ ol {
 
 /* ================= MOBILE MENU ================= */
 
-.mobile-callbar,
-.mobile-menu-toggle {
+.mobile-callbar {
     display: none;
+}
+
+.mobile-menu-toggle {
+    display: inline-grid;
 }
 
 .mobile-menu-overlay {
@@ -758,6 +778,8 @@ ol {
 /* ================= FORMS ================= */
 
 .form-card {
+    display: grid;
+    gap: 18px;
     padding: clamp(18px, 3vw, 28px);
     border: 1px solid var(--color-border);
     border-radius: 30px;
@@ -820,6 +842,20 @@ ol {
     font-size: 0.86rem;
 }
 
+.form-check.full {
+    grid-column: 1 / -1;
+}
+
+.form-check > span:last-child {
+    line-height: 1.5;
+    margin-top: 1px;
+}
+
+.form-card button[type="submit"],
+.form-card .btn[type="submit"] {
+    justify-self: end;
+}
+
 .form-check input {
     position: absolute;
     opacity: 0;
@@ -868,16 +904,11 @@ ol {
     }
 
     .header-inner {
-        grid-template-columns: auto 1fr auto auto;
+        grid-template-columns: auto 1fr auto;
     }
 
-    .mobile-callbar,
     .mobile-menu-toggle {
-        display: inline-flex;
-    }
-
-    .header-phone {
-        display: none;
+        display: inline-grid;
     }
 
     .footer-grid {
