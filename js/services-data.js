@@ -16,7 +16,7 @@ window.SERVICES_DATA = [
             "Elaris Bath helps homeowners start the comparison process by organizing the request around project scope instead of presenting itself as the company doing the installation."
         ],
         factors: ["Tub style and size", "Drain and fixture location", "Wall surround or tile scope", "Removal, disposal, and access"],
-        prompts: ["Is removal included?", "Who handles plumbing adjustments?", "Are wall surround materials included?", "What timeline should I expect?"],
+        prompts: ["Is removal included?", "Who handles plumbing adjustments?", "Are wall surround materials included?", "What timeline should I expect?", "Which tub materials fit my layout?", "Is disposal listed in writing?", "How is waterproofing handled?", "What warranty terms apply?", "Who confirms permits or code needs?"],
         cta: "Request bathtub installation quotes"
     },
     {
@@ -34,7 +34,7 @@ window.SERVICES_DATA = [
             "The right provider fit can depend on whether the project is a simple replacement, a tub-to-shower conversion, or part of a broader bathroom refresh."
         ],
         factors: ["Current tub condition", "Surround wall condition", "Replacement material", "Plumbing and access limits"],
-        prompts: ["Will the old tub be removed?", "Is wall repair included?", "What materials are available?", "How is cleanup handled?"],
+        prompts: ["Will the old tub be removed?", "Is wall repair included?", "What materials are available?", "How is cleanup handled?", "Can the footprint stay the same?", "Are fixture updates included?", "What hidden damage could change price?", "How long is the replacement window?", "What warranty details are written?"],
         cta: "Request replacement provider options"
     },
     {
@@ -52,7 +52,7 @@ window.SERVICES_DATA = [
             "Homeowners should compare whether a provider focuses on cosmetic refinishing, structural repair, plumbing-related issues, or full replacement alternatives."
         ],
         factors: ["Type of damage", "Surface material", "Leak risk", "Repair versus replacement value"],
-        prompts: ["Is the issue cosmetic or structural?", "What repair method is used?", "How long should the finish last?", "Is replacement recommended instead?"],
+        prompts: ["Is the issue cosmetic or structural?", "What repair method is used?", "How long should the finish last?", "Is replacement recommended instead?", "Will the color match existing surfaces?", "Is there a leak risk?", "What prep work is needed?", "How soon can the tub be used?", "Is the repair warranty written?"],
         cta: "Request bathtub repair quotes"
     },
     {
@@ -70,7 +70,7 @@ window.SERVICES_DATA = [
             "Comparing providers helps homeowners understand whether a company is suited for a focused shower update, a tub-to-shower conversion, or a more complete bathroom remodel."
         ],
         factors: ["Tile or wall system", "Drain and waterproofing", "Glass enclosure style", "Accessibility and storage needs"],
-        prompts: ["What waterproofing system is used?", "Is glass included in the quote?", "Can the layout change?", "What maintenance is required?"],
+        prompts: ["What waterproofing system is used?", "Is glass included in the quote?", "Can the layout change?", "What maintenance is required?", "Are niches or benches included?", "What tile or panel options exist?", "Will plumbing need to move?", "How is ventilation considered?", "What cleanup is included?"],
         cta: "Request shower remodeling quotes"
     },
     {
@@ -88,7 +88,7 @@ window.SERVICES_DATA = [
             "Elaris Bath helps homeowners route requests toward providers who may fit the plumbing scope, while homeowners should still verify credentials and local requirements directly."
         ],
         factors: ["Fixture type", "Drain or valve access", "Leak history", "Permit or code requirements"],
-        prompts: ["Is the quote for labor only?", "Are parts included?", "Will walls need to be opened?", "Are permits required locally?"],
+        prompts: ["Is the quote for labor only?", "Are parts included?", "Will walls need to be opened?", "Are permits required locally?", "What fixture brands are compatible?", "Is leak diagnosis included?", "Will tile or drywall repair be needed?", "How is water shutoff handled?", "What code items should be checked?"],
         cta: "Request bathroom plumbing quotes"
     },
     {
@@ -106,7 +106,7 @@ window.SERVICES_DATA = [
             "Because renovation scope can vary widely, homeowners should compare providers by written scope, communication clarity, timeline, material options, and local requirements."
         ],
         factors: ["Full scope clarity", "Layout and fixture changes", "Material and finish level", "Timeline and project coordination"],
-        prompts: ["Is design planning included?", "Who coordinates plumbing and finish work?", "What is excluded from the quote?", "How are change orders handled?"],
+        prompts: ["Is design planning included?", "Who coordinates plumbing and finish work?", "What is excluded from the quote?", "How are change orders handled?", "Are materials allowances written?", "What timeline is realistic?", "Who handles permits if required?", "How is cleanup managed?", "What warranty applies by work type?"],
         cta: "Request renovation provider options"
     }
 ];

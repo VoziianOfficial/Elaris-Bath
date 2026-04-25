@@ -273,10 +273,25 @@
     border: 1px solid var(--color-border);
     border-radius: 46px;
     background:
-        linear-gradient(135deg, rgba(184, 192, 190, 0.13), rgba(216, 192, 138, 0.1)),
-        #052923;
+        linear-gradient(135deg, rgba(3, 28, 25, 0.88), rgba(3, 28, 25, 0.62)),
+        linear-gradient(180deg, rgba(216, 192, 138, 0.08), rgba(184, 192, 190, 0.08)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=80") center/cover;
     text-align: center;
     box-shadow: var(--shadow-soft);
+}
+
+.about-cta-card::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(232, 214, 184, 0.16);
+    border-radius: 34px;
+    pointer-events: none;
+}
+
+.about-cta-card > * {
+    position: relative;
+    z-index: 2;
 }
 
 .about-cta-card .section-eyebrow {
