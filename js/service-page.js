@@ -94,10 +94,24 @@ function renderServiceSections(service) {
                     <i data-lucide="search-check"></i>
                     <h3>Use the platform as a starting point.</h3>
                     <p>Elaris Bath helps organize your request and connect it with independent local providers. It does not complete, supervise, or guarantee bathroom work.</p>
+                    <p>Think of the platform as an intake and comparison layer: you describe the scope, then providers can clarify what is included, what is excluded, and what changes the price.</p>
+                    <p>For any service category, the final decision should be based on written scope, credential checks, timeline clarity, and a quote that matches the same assumptions.</p>
                 </div>
                 <div class="compare-checklist" data-aos="fade-up" data-aos-delay="90">
                     <span class="section-eyebrow">Before you choose</span>
                     <ul>${compareItems}</ul>
+                    <p class="section-text">
+                        Compare providers using the same questions, then confirm license, insurance, service area, and
+                        warranty terms directly before you hire.
+                    </p>
+                    <p class="section-text">
+                        Ask each provider to quote the same assumptions (materials, removal, waterproofing, cleanup,
+                        and timeline) so you can compare scope instead of comparing mismatched totals.
+                    </p>
+                    <p class="section-text">
+                        Elaris Bath is an independent matching platform. Providers are third parties, and homeowners
+                        should verify credentials and written quote details directly.
+                    </p>
                 </div>
             </div>
         </section>
