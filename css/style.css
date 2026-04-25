@@ -1093,3 +1093,177 @@ ol {
         min-height: 330px !important;
     }
 }
+
+/* ================= SENIOR POLISH PATCH ================= */
+.site-header {
+    position: sticky;
+    top: 0;
+}
+
+.section-title,
+.service-hero-copy h1,
+.about-hero-copy h1,
+.services-hero-copy h1,
+.contact-hero h1,
+.legal-hero h1,
+.hero-content h1 {
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: clamp(2.15rem, 4.6vw, 4.9rem);
+    line-height: 0.98;
+}
+
+.section-eyebrow {
+    margin-bottom: 12px;
+}
+
+.section-text {
+    margin-top: 14px;
+}
+
+.form-check.full {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.form-check {
+    align-items: center;
+    line-height: 1.45;
+}
+
+.form-check span:last-child {
+    display: block;
+    max-width: none;
+    color: var(--color-muted);
+}
+
+.form-check .field-error {
+    grid-column: 1 / -1;
+}
+
+.field-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 6px;
+    color: #ffcfbd;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.form-field input.is-invalid,
+.form-field textarea.is-invalid,
+.form-field select.is-invalid {
+    border-color: rgba(255, 207, 189, 0.9);
+    background: rgba(255, 207, 189, 0.07);
+}
+
+.form-check.is-invalid .custom-check {
+    border-color: rgba(255, 207, 189, 0.95);
+    box-shadow: 0 0 0 4px rgba(255, 207, 189, 0.08);
+}
+
+.form-success-message {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 13px 14px;
+    color: var(--color-sand-soft);
+    border: 1px solid rgba(216, 192, 138, 0.34);
+    border-radius: 16px;
+    background: rgba(216, 192, 138, 0.1);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.form-success-message.is-visible {
+    display: flex;
+}
+
+.form-success-message i {
+    flex: 0 0 auto;
+    color: var(--color-cta);
+}
+
+@media (max-width: 760px) {
+    :root {
+        --header-height: 68px;
+        --space-section-y: 42px;
+        --space-hero-y: 34px;
+    }
+
+    .btn {
+        min-height: 42px;
+        padding: 10px 14px;
+        font-size: 0.84rem;
+        gap: 7px;
+    }
+
+    .mobile-callbar {
+        width: 42px;
+        height: 42px;
+        min-height: 42px;
+        padding: 0;
+        font-size: 0;
+        border-radius: 50%;
+    }
+
+    .mobile-callbar::before {
+        content: "☎";
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .mobile-menu-toggle,
+    .icon-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mobile-menu-inner {
+        min-height: auto;
+        gap: 18px;
+        padding: 14px;
+        border-radius: 24px;
+    }
+
+    .mobile-nav-link,
+    .mobile-services-toggle {
+        padding: 12px 0;
+        font-size: clamp(1.65rem, 10vw, 3rem);
+    }
+
+    .mobile-service-link {
+        padding: 11px;
+        border-radius: 14px;
+    }
+
+    .mobile-contact-card {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 11vw, 3.4rem);
+    }
+
+    .form-check {
+        align-items: flex-start;
+        font-size: 0.82rem;
+    }
+
+    .cookie-consent {
+        bottom: 10px;
+        border-radius: 18px;
+    }
+
+    .cookie-consent-inner {
+        gap: 12px;
+    }
+
+    .cookie-actions .btn {
+        width: 100%;
+    }
+}

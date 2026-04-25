@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initServiceContent();
-    initServicePageForms();
     initAnimations();
 });
 
@@ -18,6 +17,9 @@ function initServiceContent() {
     if (!service) return;
 
     document.title = `${service.title} Providers | Elaris Bath`;
+
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.setAttribute("content", `${service.title}: compare independent local bathroom providers through Elaris Bath. Review scope, quote questions, and provider-fit details before hiring.`);
 
     const heroTitle = document.querySelector(".service-hero-copy h1");
     const heroText = document.querySelector(".service-hero-copy p");
@@ -56,6 +58,10 @@ function renderServiceSections(service) {
         <span><i data-lucide="check"></i>${item}</span>
     `).join("");
 
+    const compareItems = (service.compare || []).map((item) => `
+        <li><i data-lucide="circle-check"></i><span>${item}</span></li>
+    `).join("");
+
     target.innerHTML = `
         <section class="section service-overview-section">
             <div class="container service-overview-grid">
@@ -75,26 +81,40 @@ function renderServiceSections(service) {
             <div class="container-wide service-detail-panel">
                 <div class="detail-intro" data-aos="fade-right">
                     <span class="section-eyebrow">Comparison details</span>
-                    <h2>What should be reviewed before choosing?</h2>
-                    <p>Use these points as a cleaner starting framework when speaking with independent local providers. The goal is not to pick the fastest answer, but the clearest quote.</p>
+                    <h2>${service.detailTitle || "What should be reviewed before choosing?"}</h2>
+                    <p>${service.detailText || "Use these points as a clearer starting framework when speaking with independent local providers. The goal is not the fastest answer, but the clearest quote."}</p>
                 </div>
                 <div class="service-factor-grid" data-aos="fade-left">${factors}</div>
             </div>
         </section>
 
+        <section class="section service-compare-section">
+            <div class="container service-compare-grid">
+                <div class="compare-mini-card" data-aos="fade-up">
+                    <i data-lucide="search-check"></i>
+                    <h3>Use the platform as a starting point.</h3>
+                    <p>Elaris Bath helps organize your request and connect it with independent local providers. It does not complete, supervise, or guarantee bathroom work.</p>
+                </div>
+                <div class="compare-checklist" data-aos="fade-up" data-aos-delay="90">
+                    <span class="section-eyebrow">Before you choose</span>
+                    <ul>${compareItems}</ul>
+                </div>
+            </div>
+        </section>
+
         <section class="section provider-section compact-provider-section">
             <div class="container">
-                <div class="section-head split-head">
+                <div class="section-head split-head compact-head">
                     <div>
                         <span class="section-eyebrow">Provider fit</span>
                         <h2 class="section-title">Ask better questions before hiring.</h2>
                     </div>
-                    <p class="section-text">Elaris Bath does not perform bathroom work directly. Homeowners should verify licenses, insurance, quote details, warranty terms, and service-area availability before hiring a provider.</p>
+                    <p class="section-text">Homeowners should verify licenses, insurance, written quote details, warranty terms, and service-area availability directly with any provider they consider hiring.</p>
                 </div>
                 <div class="provider-grid three-card-grid">
                     <article class="provider-card" data-aos="fade-up"><i data-lucide="badge-check"></i><h3>Credentials</h3><p>Ask what license, insurance, permits, or local requirements apply to the work being discussed.</p></article>
-                    <article class="provider-card" data-aos="fade-up" data-aos-delay="80"><i data-lucide="file-text"></i><h3>Written scope</h3><p>Compare labor, materials, exclusions, timeline, payment terms, and what happens if the scope changes.</p></article>
-                    <article class="provider-card" data-aos="fade-up" data-aos-delay="160"><i data-lucide="calendar-clock"></i><h3>Scheduling</h3><p>Confirm project timing, expected disruption, provider availability, and cleanup expectations.</p></article>
+                    <article class="provider-card" data-aos="fade-up" data-aos-delay="80"><i data-lucide="file-text"></i><h3>Written scope</h3><p>Compare labor, materials, exclusions, timeline, payment terms, and how changes are handled.</p></article>
+                    <article class="provider-card" data-aos="fade-up" data-aos-delay="160"><i data-lucide="calendar-clock"></i><h3>Scheduling</h3><p>Confirm timing, expected disruption, provider availability, communication rhythm, and cleanup expectations.</p></article>
                 </div>
             </div>
         </section>
@@ -112,31 +132,16 @@ function renderServiceSections(service) {
     `;
 }
 
-function initServicePageForms() {
-    document.querySelectorAll("form").forEach((form) => {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            if (!form.checkValidity()) {
-                form.classList.add("was-validated");
-                form.reportValidity();
-                return;
-            }
-            form.reset();
-            form.classList.remove("was-validated");
-        });
-    });
-}
-
 function initAnimations() {
     if (window.AOS) {
-        AOS.init({ duration: 760, easing: "ease-out-cubic", once: true, offset: 70 });
+        AOS.init({ duration: 720, easing: "ease-out-cubic", once: true, offset: 64 });
     }
 
     if (window.gsap && window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(".service-hero-media img", {
-            scale: 1.05,
-            y: 24,
+            scale: 1.04,
+            y: 16,
             scrollTrigger: { trigger: ".service-hero", start: "top top", end: "bottom top", scrub: true }
         });
     }

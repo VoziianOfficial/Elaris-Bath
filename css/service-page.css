@@ -506,3 +506,146 @@
         min-height: 320px;
     }
 }
+
+/* ================= SERVICE PAGE FINAL CONTENT + RESPONSIVE PATCH ================= */
+.service-hero {
+    padding: clamp(32px, 4.2vw, 58px) 0;
+}
+
+.service-hero-grid {
+    gap: clamp(20px, 4vw, 56px);
+}
+
+.service-hero-copy h1 {
+    font-size: clamp(2.65rem, 5vw, 5.8rem);
+    line-height: 0.92;
+    font-weight: 600;
+    letter-spacing: -0.055em;
+}
+
+.service-hero-copy p {
+    max-width: 620px;
+    margin-top: 16px;
+    font-size: 1rem;
+}
+
+.service-hero-actions {
+    margin-top: 22px;
+}
+
+.service-hero-media,
+.service-hero-media img {
+    min-height: clamp(360px, 46vw, 520px);
+}
+
+.compact-head {
+    margin-bottom: 28px;
+}
+
+.service-compare-grid {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: clamp(18px, 4vw, 46px);
+    align-items: stretch;
+}
+
+.compare-mini-card,
+.compare-checklist {
+    padding: clamp(20px, 3vw, 34px);
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: var(--shadow-card);
+}
+
+.compare-mini-card {
+    display: grid;
+    align-content: end;
+    min-height: 260px;
+}
+
+.compare-mini-card i {
+    width: 36px;
+    height: 36px;
+    color: var(--color-cta);
+    margin-bottom: 38px;
+}
+
+.compare-mini-card h3 {
+    margin: 0 0 10px;
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+}
+
+.compare-mini-card p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.compare-checklist ul {
+    display: grid;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.compare-checklist li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    color: var(--color-sand-soft);
+    background: rgba(3, 28, 25, 0.38);
+}
+
+.compare-checklist li i {
+    width: 18px;
+    color: var(--color-cta);
+    margin-top: 3px;
+}
+
+.provider-card {
+    min-height: 230px;
+}
+
+.quote-prompts-card h2,
+.service-final-card h2 {
+    font-size: clamp(2.1rem, 4.6vw, 4.8rem);
+    font-weight: 600;
+}
+
+@media (max-width: 980px) {
+    .service-compare-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-hero-copy h1 {
+        font-size: clamp(2.45rem, 13vw, 4.2rem);
+    }
+
+    .service-hero-media,
+    .service-hero-media img {
+        min-height: 300px;
+    }
+
+    .service-media-note {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 13px;
+        border-radius: 18px;
+    }
+
+    .provider-card,
+    .compare-mini-card {
+        min-height: auto;
+    }
+}
