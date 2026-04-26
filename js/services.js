@@ -14,7 +14,7 @@ function initServicesAnimations() {
         });
     }
 
-    if (window.gsap) {
+    if (window.gsap && window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.to(".board-image", {
@@ -49,16 +49,10 @@ function initServicesAnimations() {
             }
         });
 
-        gsap.utils.toArray(".atlas-card").forEach((card, index) => {
-            gsap.to(card, {
-                y: index % 2 === 0 ? -18 : 18,
-                scrollTrigger: {
-                    trigger: ".service-atlas",
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: true
-                }
-            });
-        });
+        /*
+            ВАЖНО:
+            Не анимируем .atlas-card через y/transform.
+            Иначе карточки service-atlas начинают наезжать друг на друга.
+        */
     }
 }
