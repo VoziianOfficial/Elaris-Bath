@@ -1626,3 +1626,314 @@ ol {
         font-size: 0.84rem !important;
     }
 }
+
+
+/* ================= GLOBAL SMOOTH PREMIUM MOTION ================= */
+
+:root {
+    --motion-fast: 0.22s ease;
+    --motion-main: 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+    --motion-slow: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* общая плавность */
+a,
+button,
+.btn,
+.icon-btn,
+.logo,
+.nav-link,
+.nav-dropdown-toggle,
+.services-dropdown-link,
+.mobile-nav-link,
+.mobile-services-toggle,
+.mobile-service-link,
+.footer-links a,
+.form-field input,
+.form-field textarea,
+.form-field select,
+.form-card,
+.info-card,
+.faq-item,
+.image-service-card,
+.atlas-card,
+.provider-card,
+.flow-step,
+.service-card,
+.service-page-card,
+.compare-points article,
+.quote-prompts-grid span,
+.hero-proof div,
+.contact-hero-metrics div,
+.contact-gallery-card,
+.style-slide,
+.process-mini-grid article,
+.contact-concierge-card {
+    transition:
+        transform var(--motion-main),
+        opacity var(--motion-main),
+        color var(--motion-fast),
+        background var(--motion-main),
+        border-color var(--motion-main),
+        box-shadow var(--motion-main),
+        filter var(--motion-main);
+}
+
+/* плавное появление картинок */
+img {
+    transition:
+        transform var(--motion-slow),
+        filter var(--motion-main),
+        opacity var(--motion-main);
+}
+
+/* hover для карточек по всему сайту */
+.image-service-card:hover,
+.atlas-card:hover,
+.provider-card:hover,
+.flow-step:hover,
+.info-card:hover,
+.faq-item:hover,
+.compare-points article:hover,
+.hero-proof div:hover,
+.contact-hero-metrics div:hover,
+.contact-gallery-card:hover,
+.style-slide:hover,
+.process-mini-grid article:hover,
+.contact-concierge-card:hover,
+.quote-prompts-grid span:hover {
+    transform: translateY(-6px);
+    border-color: rgba(216, 192, 138, 0.46);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+/* картинки внутри карточек чуть оживают */
+.image-service-card:hover img,
+.atlas-card:hover img,
+.contact-gallery-card:hover img,
+.style-slide:hover img,
+.service-compare-photo:hover img,
+.hero-image:hover img,
+.contact-hero-image:hover img,
+.contact-concierge-card:hover .concierge-bg-img {
+    transform: scale(1.055);
+}
+
+/* кнопки — мягкий premium hover */
+.btn {
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* лёгкий shine на кнопках */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(110deg,
+            transparent,
+            rgba(255, 255, 255, 0.26),
+            transparent);
+    transform: skewX(-18deg);
+    transition: left 0.65s ease;
+    pointer-events: none;
+}
+
+.btn:hover::before {
+    left: 130%;
+}
+
+/* иконки в кнопках двигаются аккуратно */
+.btn svg,
+.btn i {
+    transition: transform var(--motion-main);
+}
+
+.btn:hover svg,
+.btn:hover i {
+    transform: translateX(3px);
+}
+
+/* круглые кнопки */
+.icon-btn:hover {
+    transform: translateY(-2px) rotate(-4deg);
+}
+
+.icon-btn:active {
+    transform: scale(0.96);
+}
+
+/* nav hover */
+.nav-link,
+.nav-dropdown-toggle {
+    position: relative;
+}
+
+.nav-link::after,
+.nav-dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 6px;
+    height: 1px;
+    background: var(--color-cta);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--motion-main);
+}
+
+.nav-link:hover::after,
+.nav-dropdown-toggle:hover::after {
+    transform: scaleX(1);
+}
+
+/* dropdown links */
+.services-dropdown-link:hover,
+.mobile-service-link:hover {
+    transform: translateX(4px);
+}
+
+/* footer links */
+.footer-links a:hover {
+    transform: translateX(6px);
+}
+
+/* формы */
+.form-field input:hover,
+.form-field textarea:hover,
+.form-field select:hover {
+    border-color: rgba(216, 192, 138, 0.34);
+    background: rgba(216, 192, 138, 0.065);
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+/* лёгкое свечение у важных карточек */
+.form-card:hover,
+.quote-prompts-card:hover,
+.match-flow-panel:hover,
+.service-cta-card:hover,
+.aggregator-help-shell:hover,
+.contact-concierge-card:hover {
+    border-color: rgba(216, 192, 138, 0.34);
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.24);
+}
+
+/* hero floating card */
+.hero-floating-card,
+.board-note,
+.contact-routing-card,
+.service-compare-photo-note,
+.map-overlay {
+    transition:
+        transform var(--motion-main),
+        border-color var(--motion-main),
+        background var(--motion-main),
+        box-shadow var(--motion-main);
+}
+
+.hero-floating-card:hover,
+.board-note:hover,
+.contact-routing-card:hover,
+.service-compare-photo-note:hover,
+.map-overlay:hover {
+    transform: translateY(-5px);
+    border-color: rgba(216, 192, 138, 0.42);
+    background: rgba(3, 28, 25, 0.88);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.26);
+}
+
+/* мягкая пульсация декоративных шаров */
+.hero-orb,
+.service-cta-card::before,
+.service-cta-card::after,
+.quote-prompts-card::before,
+.quote-prompts-card::after {
+    animation: premiumFloat 7s ease-in-out infinite alternate;
+}
+
+@keyframes premiumFloat {
+    from {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    to {
+        transform: translate3d(10px, -12px, 0) scale(1.04);
+    }
+}
+
+/* мягкий reveal fallback, если нет AOS */
+html.no-aos .section,
+html.no-aos .form-card,
+html.no-aos .image-service-card,
+html.no-aos .atlas-card,
+html.no-aos .provider-card {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* уменьшение анимаций для пользователей с reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* ================= SOFT SCROLL REVEAL ================= */
+
+.soft-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.soft-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= HIDE HEAVY SECTIONS ON TABLET / MOBILE ================= */
+
+@media (max-width: 1100px) {
+
+    /* Home + all service pages: quote prompts sections */
+    .quote-prompts-section {
+        display: none !important;
+    }
+
+    /* Home: hero visual images */
+    .home-hero .hero-visual {
+        display: none !important;
+    }
+
+    /* Services page: aggregator help section */
+    .aggregator-help-section {
+        display: none !important;
+    }
+}
