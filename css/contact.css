@@ -715,3 +715,308 @@
         min-height: 350px;
     }
 }
+
+/* ================= CONTACT CONCIERGE SECTION ================= */
+
+.contact-concierge-section {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(40px, 5vw, 68px);
+    padding-bottom: clamp(40px, 5vw, 68px);
+}
+
+.contact-concierge-section .container-wide {
+    width: min(100% - 32px, 1480px);
+    margin: 0 auto;
+}
+
+.contact-concierge-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+.contact-concierge-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 34px;
+    background: #052923;
+    box-shadow: var(--shadow-card);
+    isolation: isolate;
+}
+
+/* само фото */
+.concierge-bg-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transform: scale(1.01);
+    transition: transform 0.8s ease;
+}
+
+/* лёгкий градиент, чтобы фото было видно */
+.contact-concierge-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(180deg,
+            rgba(3, 28, 25, 0.02) 0%,
+            rgba(3, 28, 25, 0.16) 48%,
+            rgba(3, 28, 25, 0.52) 100%),
+        linear-gradient(90deg,
+            rgba(3, 28, 25, 0.34),
+            rgba(3, 28, 25, 0.06),
+            rgba(3, 28, 25, 0.26));
+    pointer-events: none;
+}
+
+/* мягкая подложка только снизу под текст */
+.contact-concierge-card::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    height: 48%;
+    z-index: 1;
+    border-radius: 26px;
+    background: linear-gradient(180deg,
+            rgba(3, 28, 25, 0),
+            rgba(3, 28, 25, 0.46));
+    pointer-events: none;
+}
+
+.contact-concierge-card:hover .concierge-bg-img {
+    transform: scale(1.06);
+}
+
+.contact-concierge-main {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(24px, 4vw, 46px);
+}
+
+.contact-concierge-main .section-eyebrow,
+.contact-concierge-main h2,
+.contact-concierge-main p,
+.concierge-checklist,
+.contact-concierge-side article>span,
+.contact-concierge-side h3,
+.contact-concierge-side p,
+.concierge-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-concierge-main h2 {
+    max-width: 820px;
+    margin: 0;
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5.4vw, 6rem);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+}
+
+.contact-concierge-main p {
+    max-width: 680px;
+    margin: 20px 0 0;
+    color: rgba(244, 232, 210, 0.88);
+    font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+    line-height: 1.62;
+}
+
+.concierge-checklist {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.concierge-checklist div {
+    min-height: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid rgba(216, 192, 138, 0.22);
+    border-radius: 20px;
+    background: rgba(3, 28, 25, 0.42);
+    backdrop-filter: blur(10px);
+}
+
+.concierge-checklist i,
+.concierge-checklist svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-cta);
+}
+
+.concierge-checklist span {
+    color: var(--color-sand-soft);
+    font-size: 0.82rem;
+    font-weight: 850;
+    line-height: 1.25;
+}
+
+.contact-concierge-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+}
+
+.contact-concierge-side .contact-concierge-card {
+    min-height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.contact-concierge-side .contact-concierge-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(216, 192, 138, 0.45);
+}
+
+.concierge-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    color: var(--color-bg-dark);
+    border-radius: 50%;
+    background: var(--color-cta);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.concierge-icon i,
+.concierge-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.contact-concierge-side article>span {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 7px 10px;
+    color: var(--color-cta);
+    font-size: 0.68rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    border: 1px solid rgba(216, 192, 138, 0.24);
+    border-radius: 999px;
+    background: rgba(3, 28, 25, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.contact-concierge-side h3 {
+    max-width: 390px;
+    margin: 0;
+    color: var(--color-sand-soft);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 2.6vw, 3rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+}
+
+.contact-concierge-side p {
+    max-width: 430px;
+    margin: 12px 0 0;
+    color: rgba(244, 232, 210, 0.86);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* responsive */
+
+@media (max-width: 1180px) {
+    .contact-concierge-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-concierge-side {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .contact-concierge-main {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-concierge-section {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .contact-concierge-section .container-wide {
+        width: min(100% - 24px, 1480px);
+    }
+
+    .contact-concierge-main {
+        min-height: auto;
+        padding: 22px;
+        border-radius: 28px;
+    }
+
+    .contact-concierge-main h2 {
+        font-size: clamp(2.45rem, 12vw, 4.4rem);
+    }
+
+    .contact-concierge-main p {
+        font-size: 0.94rem;
+    }
+
+    .concierge-checklist {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 22px;
+    }
+
+    .contact-concierge-side {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-concierge-side .contact-concierge-card {
+        min-height: 230px;
+        padding: 20px;
+        border-radius: 26px;
+    }
+
+    .contact-concierge-side h3 {
+        font-size: clamp(1.9rem, 9vw, 2.8rem);
+    }
+}
+
+@media (max-width: 430px) {
+    .concierge-checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .concierge-checklist div {
+        min-height: 66px;
+    }
+
+    .concierge-icon {
+        width: 42px;
+        height: 42px;
+    }
+}
