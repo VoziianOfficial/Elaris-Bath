@@ -118,30 +118,48 @@ function initServicesDropdown(config) {
     const desktopDropdown = document.querySelector("[data-services-dropdown]");
     const mobileList = document.querySelector("[data-mobile-services-list]");
 
+    const allServicesDesktopLink = `
+        <a href="services.html" class="services-dropdown-link services-dropdown-link-all">
+            <span>All Services</span>
+            <small>View every bathroom service category</small>
+        </a>
+    `;
+
+    const allServicesMobileLink = `
+        <a href="services.html" class="mobile-service-link mobile-service-link-all">
+            <span>All Services</span>
+            <small>Open full services page</small>
+        </a>
+    `;
+
     if (desktopDropdown && Array.isArray(config.services)) {
-        desktopDropdown.innerHTML = config.services
-            .map(
-                (service) => `
-                <a href="${service.href}" class="services-dropdown-link">
-                    <span>${service.title}</span>
-                    <small>${service.description}</small>
-                </a>
-            `
-            )
-            .join("");
+        desktopDropdown.innerHTML =
+            allServicesDesktopLink +
+            config.services
+                .map(
+                    (service) => `
+                    <a href="${service.href}" class="services-dropdown-link">
+                        <span>${service.title}</span>
+                        <small>${service.description}</small>
+                    </a>
+                `
+                )
+                .join("");
     }
 
     if (mobileList && Array.isArray(config.services)) {
-        mobileList.innerHTML = config.services
-            .map(
-                (service) => `
-                <a href="${service.href}" class="mobile-service-link">
-                    <span>${service.title}</span>
-                    <small>${service.description}</small>
-                </a>
-            `
-            )
-            .join("");
+        mobileList.innerHTML =
+            allServicesMobileLink +
+            config.services
+                .map(
+                    (service) => `
+                    <a href="${service.href}" class="mobile-service-link">
+                        <span>${service.title}</span>
+                        <small>${service.description}</small>
+                    </a>
+                `
+                )
+                .join("");
     }
 
     const mobileServicesToggle = document.querySelector(".mobile-services-toggle");

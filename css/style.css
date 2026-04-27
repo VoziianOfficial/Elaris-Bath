@@ -1493,3 +1493,22 @@ ol {
         min-height: 64px;
     }
 }
+
+/* ================= ALL SERVICES LINKS ================= */
+
+.services-dropdown-link-all,
+.mobile-service-link-all {
+    border: 1px solid rgba(216, 192, 138, 0.34);
+    background: rgba(216, 192, 138, 0.1);
+}
+
+.services-dropdown-link-all span,
+.mobile-service-link-all span {
+    color: var(--color-cta);
+}
+
+.services-dropdown-link-all:hover,
+.mobile-service-link-all:hover {
+    background: rgba(216, 192, 138, 0.16);
+    border-color: rgba(216, 192, 138, 0.52);
+}

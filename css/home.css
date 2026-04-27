@@ -11,6 +11,37 @@
     overflow: hidden;
 }
 
+/* фоновое фото для hero */
+.home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(180deg,
+            rgba(3, 28, 25, 0.28),
+            rgba(3, 28, 25, 0.46)),
+        url("../images/contact/contact-ficture-hero.jpg") center/cover no-repeat;
+    transform: scale(1.04);
+    pointer-events: none;
+}
+
+/* мягкий градиент поверх фото */
+.home-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(216, 192, 138, 0.14), transparent 34%),
+        radial-gradient(circle at 82% 78%, rgba(184, 192, 190, 0.08), transparent 38%),
+        linear-gradient(90deg,
+            rgba(3, 28, 25, 0.58),
+            rgba(3, 28, 25, 0.16),
+            rgba(3, 28, 25, 0.52));
+    pointer-events: none;
+}
+
 .hero-grid {
     position: relative;
     z-index: 2;
