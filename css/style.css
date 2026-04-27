@@ -1417,3 +1417,79 @@ ol {
         min-height: calc(100vh - 24px);
     }
 }
+
+/* ================= BURGER MENU EQUAL SPACING FIX ================= */
+
+.mobile-nav {
+    display: grid;
+    gap: 0;
+}
+
+.mobile-nav-link,
+.mobile-services-toggle {
+    min-height: 76px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Services button should keep same height as other menu links */
+.mobile-services-toggle {
+    margin: 0;
+}
+
+/* Dropdown panel should not change button spacing visually */
+.mobile-services-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    margin: 0;
+    transition: grid-template-rows 0.35s ease, padding 0.35s ease;
+}
+
+.mobile-services-panel.is-open {
+    grid-template-rows: 1fr;
+    padding: 12px 0 16px;
+}
+
+/* Inner wrapper */
+.mobile-services-panel>div {
+    overflow: hidden;
+    display: grid;
+    gap: 8px;
+}
+
+/* Service links inside dropdown */
+.mobile-service-link {
+    margin-top: 0;
+    padding: 13px 14px;
+    border-radius: 16px;
+}
+
+/* Make dropdown visually belong to Services, not break menu rhythm */
+.mobile-services-panel.is-open+.mobile-nav-link {
+    margin-top: 0;
+}
+
+/* Mobile adjustment */
+@media (max-width: 760px) {
+
+    .mobile-nav-link,
+    .mobile-services-toggle {
+        min-height: 68px;
+    }
+
+    .mobile-services-panel.is-open {
+        padding: 10px 0 14px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .mobile-nav-link,
+    .mobile-services-toggle {
+        min-height: 64px;
+    }
+}
