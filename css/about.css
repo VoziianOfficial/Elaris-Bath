@@ -212,6 +212,55 @@
     color: var(--color-muted);
 }
 
+/* ================= MODEL SECTION BACKGROUND ================= */
+
+.model-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding-top: clamp(46px, 5vw, 76px);
+    padding-bottom: clamp(46px, 5vw, 76px);
+}
+
+/* фото на фоне */
+.model-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background:
+        linear-gradient(180deg, rgba(3, 28, 25, 0.24), rgba(3, 28, 25, 0.32)),
+        url("../images/services/service-card-5.jpg") center/cover no-repeat;
+    transform: scale(1.04);
+}
+
+/* мягкий градиент поверх фото */
+.model-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(216, 192, 138, 0.12), transparent 34%),
+        radial-gradient(circle at 82% 78%, rgba(184, 192, 190, 0.1), transparent 38%),
+        linear-gradient(90deg, rgba(3, 28, 25, 0.38), rgba(3, 28, 25, 0.12), rgba(3, 28, 25, 0.34));
+    pointer-events: none;
+}
+
+/* чтобы контент был поверх фона */
+.model-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+.model-section .model-card,
+.model-section article,
+.model-section .card {
+    background: rgba(1, 27, 24, 0.58);
+    border: 1px solid rgba(216, 192, 138, 0.2);
+    backdrop-filter: blur(12px);
+}
+
 /* ================= VERIFY ================= */
 
 .verify-grid {
